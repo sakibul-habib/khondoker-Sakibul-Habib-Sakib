@@ -11,7 +11,8 @@ import {
   GraduationCap,
   Award,
   Radio,
-  Eye
+  Eye,
+  Camera
 } from 'lucide-react';
 import { PERSONAL_INFO } from '../data/portfolioData';
 import { ThemeToggle } from './ThemeToggle';
@@ -42,6 +43,7 @@ export const Navbar: React.FC<NavbarProps> = ({
     { label: 'About', href: '#about', icon: Sparkles },
     { label: 'Experience', href: '#experience', icon: Briefcase },
     { label: 'Projects', href: '#projects', icon: Layers },
+    { label: 'Memories', href: '#gallery', icon: Camera },
     { label: 'Thesis (3D)', href: '#thesis', icon: Eye },
     { label: 'Skills', href: '#skills', icon: Boxes },
     { label: 'Certifications', href: '#certifications', icon: Award },
@@ -54,32 +56,39 @@ export const Navbar: React.FC<NavbarProps> = ({
       id="main-navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? 'bg-white/85 dark:bg-slate-950/85 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80 shadow-md shadow-slate-200/40 dark:shadow-black/40 py-2.5'
-          : 'bg-transparent py-4'
+          ? 'bg-white/90 dark:bg-slate-950/90 backdrop-blur-xl border-b border-slate-200/90 dark:border-slate-800/90 shadow-lg shadow-slate-200/50 dark:shadow-black/50 py-4 sm:py-4.5 min-h-[76px] sm:min-h-[82px] flex items-center'
+          : 'bg-white/40 dark:bg-slate-950/40 backdrop-blur-md border-b border-slate-200/40 dark:border-slate-800/40 py-5 sm:py-6 min-h-[86px] sm:min-h-[92px] flex items-center'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
         <div className="flex items-center justify-between">
           {/* Logo / Brand with Sakib Avatar */}
           <a
             href="#"
-            className="flex items-center gap-2.5 group"
+            className="flex items-center gap-2.5 sm:gap-3 group"
             id="navbar-brand-link"
           >
-            <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border-2 border-cyan-400 shadow-md shadow-cyan-500/25 group-hover:scale-105 transition-transform bg-slate-800">
+            <div className="relative w-11 h-11 sm:w-12 sm:h-12 rounded-full overflow-hidden border-2 border-cyan-400 shadow-md shadow-cyan-500/25 group-hover:scale-105 transition-transform bg-slate-800 shrink-0">
               <img
                 src="./my-passport-photo.png"
-                alt="Sakib Habib"
-                className="w-full h-full object-cover object-top"
+                alt="Khondoker Sakibul Habib Sakib"
+                className="w-full h-full object-cover object-[50%_14%]"
+                onError={(e) => {
+                  const target = e.currentTarget;
+                  if (!target.dataset.triedFallback) {
+                    target.dataset.triedFallback = 'true';
+                    target.src = '/my-passport-photo.png';
+                  }
+                }}
               />
-              <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-emerald-400 border-2 border-slate-950" />
+              <span className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-400 border-2 border-slate-950" title="Active Head of IT & UCASM Faculty" />
             </div>
             <div>
               <span className="font-heading font-bold text-xs sm:text-sm md:text-base tracking-tight text-slate-900 dark:text-white block leading-tight">
                 KHONDOKER SAKIBUL HABIB SAKIB
               </span>
-              <span className="text-[10px] font-mono text-cyan-600 dark:text-cyan-400 block tracking-widest uppercase">
-                Head of IT • 3D Portfolio
+              <span className="text-[10px] font-mono text-cyan-600 dark:text-cyan-400 block tracking-tight">
+                Head of IT • Lecturer (UCASM) • Program Coordination, Academic Faculty
               </span>
             </div>
           </a>

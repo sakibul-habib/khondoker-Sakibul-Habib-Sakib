@@ -64,3 +64,17 @@ export interface EducationItem {
   status: 'Ongoing' | 'Completed';
   highlights?: string[];
 }
+
+export interface GalleryMemoryItem {
+  id: string;
+  title: string;
+  category: 'Milestone' | 'Academic & Campus' | 'Career & Leadership' | 'Teaching & Lab' | 'Personal';
+  year: string;
+  date?: string;
+  location: string;
+  description: string;
+  imageUrl: string;
+  isUserUploaded?: boolean;
+  tags?: string[];
+  featured?: boolean;
+}

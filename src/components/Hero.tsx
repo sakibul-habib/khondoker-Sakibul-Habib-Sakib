@@ -14,7 +14,9 @@ import {
   Github,
   ChevronDown,
   Sparkles,
-  Terminal
+  Terminal,
+  GraduationCap,
+  ShieldCheck
 } from 'lucide-react';
 import { HeroOrb3D } from './canvas/HeroOrb3D';
 import { Card3D } from './ui/Card3D';
@@ -28,16 +30,16 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResumeModal }) => {
   return (
     <section
       id="hero"
-      className="relative min-h-[92vh] pt-24 pb-16 flex items-center justify-center overflow-hidden"
+      className="relative min-h-[92vh] pt-32 sm:pt-36 pb-16 flex items-center justify-center overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Text, Badges, Metrics & CTAs */}
           <div className="lg:col-span-7 flex flex-col justify-center text-left">
             {/* Top Available status pill with 3D glow */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-cyan-50 dark:bg-cyan-950/70 border border-cyan-300 dark:border-cyan-500/40 text-cyan-700 dark:text-cyan-300 text-xs font-mono w-fit mb-4 shadow-sm dark:shadow-lg dark:shadow-cyan-950/40">
+            <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-cyan-50 dark:bg-cyan-950/70 border border-cyan-300 dark:border-cyan-500/40 text-cyan-800 dark:text-cyan-300 text-xs font-mono w-fit mb-4 shadow-sm dark:shadow-lg dark:shadow-cyan-950/40">
               <span className="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-ping" />
-              <span>HEAD OF IT & UNIVERSITY LECTURER • DHAKA, BANGLADESH</span>
+              <span className="font-semibold tracking-tight">HEAD OF IT • LECTURER OF UCASM • PROGRAM COORDINATION, ACADEMIC FACULTY</span>
             </div>
 
             {/* Main Name Heading */}
@@ -52,9 +54,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResumeModal }) => {
 
             {/* Sub-headline */}
             <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl leading-relaxed mb-6">
-              Head of IT (City Tech IT) & Lecturer (UCASM) at <strong className="text-slate-900 dark:text-white">Plannet Group</strong>. 
-              Experienced software engineering lead specializing in Laravel, Django, Python, PHP, 
-              scalable enterprise systems, and next-gen assistive IoT technology.
+              <strong className="text-slate-900 dark:text-white">Head of IT</strong> at City Tech IT (Plannet Group) directing enterprise software architecture, POS/ERP ecosystems, and technology pipelines, alongside academic leadership as <strong className="text-slate-900 dark:text-white">Lecturer in Computer Science & Engineering</strong> and <strong className="text-cyan-600 dark:text-cyan-400">Program Coordination, Academic Faculty</strong> at United College of Aviation Science & Management (UCASM) & UCAST.
             </p>
 
             {/* Quick Contact Chips */}
@@ -164,28 +164,78 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResumeModal }) => {
 
               <Card3D intensity={8} glowColor="purple" className="p-3.5">
                 <div className="flex items-center gap-2 text-purple-400 mb-1">
-                  <Award className="w-4 h-4" />
-                  <span className="text-xl font-mono font-bold">{PERSONAL_INFO.stats.nsdaLevel}</span>
+                  <GraduationCap className="w-4 h-4" />
+                  <span className="text-sm font-mono font-bold">UCASM Faculty</span>
                 </div>
                 <div className="text-[11px] text-slate-400 leading-tight">
-                  Govt. NSDA Level 4 Certified
+                  Program Coordination, Academic Faculty
                 </div>
               </Card3D>
             </div>
           </div>
 
-          {/* Right Column: 3D Hologram Interactive Canvas & Telemetry */}
-          <div className="lg:col-span-5 flex flex-col items-center justify-center">
+          {/* Right Column: Sakib's Header Photo Card + 3D Hologram Interactive Canvas */}
+          <div className="lg:col-span-5 flex flex-col items-center justify-center gap-4">
+            {/* Sakib's Executive Portrait Header Card */}
+            <div className="w-full max-w-lg bg-slate-900/90 dark:bg-slate-950/80 border border-slate-700/80 dark:border-slate-800 rounded-3xl p-4 sm:p-5 backdrop-blur-xl shadow-2xl relative overflow-hidden">
+              <div className="absolute -right-8 -top-8 w-32 h-32 rounded-full bg-cyan-500/15 blur-2xl pointer-events-none" />
+              
+              <div className="flex items-center gap-4 relative z-10">
+                {/* Official Passport Photo Frame with Optimal Face Centering */}
+                <div className="relative shrink-0">
+                  <div className="w-24 h-32 sm:w-28 sm:h-36 rounded-2xl overflow-hidden border-2 border-cyan-400 shadow-xl shadow-cyan-500/30 bg-slate-800 group">
+                    <img
+                      src="./my-passport-photo.png"
+                      alt="Khondoker Sakibul Habib Sakib"
+                      className="w-full h-full object-cover object-[50%_14%] group-hover:scale-105 transition-transform duration-300"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.dataset.triedFallback) {
+                          target.dataset.triedFallback = 'true';
+                          target.src = '/my-passport-photo.png';
+                        }
+                      }}
+                    />
+                  </div>
+                  <span className="absolute -bottom-2 -right-1 px-2 py-0.5 rounded-full bg-emerald-500 text-slate-950 font-bold text-[9px] flex items-center gap-1 shadow-md">
+                    <span className="w-1.5 h-1.5 rounded-full bg-slate-950 animate-ping" />
+                    ACTIVE
+                  </span>
+                </div>
+
+                {/* Identity & Current Leadership Roles */}
+                <div className="flex-1 min-w-0 space-y-1.5">
+                  <div className="inline-flex items-center gap-1 px-2 py-0.5 rounded-md bg-cyan-500/15 border border-cyan-500/30 text-cyan-400 text-[10px] font-mono">
+                    <ShieldCheck className="w-3 h-3 text-cyan-400" />
+                    <span>EXECUTIVE FACULTY</span>
+                  </div>
+                  <h3 className="text-base sm:text-lg font-bold font-heading text-white truncate">
+                    {PERSONAL_INFO.name}
+                  </h3>
+                  <div className="text-xs text-cyan-400 font-semibold leading-tight">
+                    Head of IT — City Tech IT
+                  </div>
+                  <div className="text-xs text-blue-400 font-medium leading-tight">
+                    Lecturer, Dept. of CSE — UCASM
+                  </div>
+                  <div className="inline-block text-[11px] px-2 py-0.5 rounded bg-purple-950/60 text-purple-300 border border-purple-800/60 mt-0.5">
+                    Program Coordination, Academic Faculty
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 3D Hologram Interactive Canvas & Telemetry */}
             <div className="relative w-full max-w-lg">
               {/* Outer decorative ambient blur rings */}
               <div className="absolute -inset-4 bg-gradient-to-tr from-cyan-500/20 via-blue-500/15 to-transparent rounded-3xl blur-2xl pointer-events-none" />
 
-              <div className="relative bg-slate-950/70 border border-slate-800 rounded-3xl p-3 sm:p-5 backdrop-blur-xl shadow-2xl">
+              <div className="relative bg-slate-950/70 border border-slate-800 rounded-3xl p-3 sm:p-4 backdrop-blur-xl shadow-2xl">
                 {/* 3D Canvas component */}
                 <HeroOrb3D colorScheme="cyan" />
 
                 {/* Telemetry Info strip */}
-                <div className="mt-3 p-3 rounded-2xl bg-slate-900/90 border border-slate-800/90 flex items-center justify-between gap-3 text-xs">
+                <div className="mt-3 p-2.5 rounded-2xl bg-slate-900/90 border border-slate-800/90 flex items-center justify-between gap-3 text-xs">
                   <div className="flex items-center gap-2">
                     <Terminal className="w-4 h-4 text-cyan-400" />
                     <span className="font-mono text-[11px] text-slate-300">

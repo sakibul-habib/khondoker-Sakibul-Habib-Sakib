@@ -247,10 +247,13 @@ export const PrintResumeModal: React.FC<PrintResumeModalProps> = ({ isOpen, onCl
                       <img
                         src="./my-passport-photo.png"
                         alt="Khondoker Sakibul Habib Sakib - Passport Photo"
-                        className="w-full h-full object-cover object-top"
+                        className="w-full h-full object-cover object-[50%_14%]"
                         onError={(e) => {
-                          // Fallback if image path fails
-                          (e.target as HTMLElement).style.display = 'none';
+                          const target = e.currentTarget;
+                          if (!target.dataset.triedFallback) {
+                            target.dataset.triedFallback = 'true';
+                            target.src = '/my-passport-photo.png';
+                          }
                         }}
                       />
                     </div>

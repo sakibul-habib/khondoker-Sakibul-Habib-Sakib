@@ -6,12 +6,13 @@ import {
   NSDACertification,
   CertificationItem,
   EducationItem,
+  GalleryMemoryItem,
 } from '../types';
 
 export const PERSONAL_INFO = {
   name: "KHONDOKER SAKIBUL HABIB SAKIB",
   shortName: "Sakib Habib",
-  title: "Head of IT • University Lecturer • Asset Project Coordinator",
+  title: "Head of IT • Lecturer (UCASM) • Program Coordination, Academic Faculty",
   photoUrl: "./my-passport-photo.png",
   address: "House-11, Road-6, Badda link Road, Gulshan-1, Dhaka-1212, Bangladesh",
   phone: "+8801789557517",
@@ -21,13 +22,13 @@ export const PERSONAL_INFO = {
   github: "https://github.com/khsakib-creator",
   website: "https://khsakib-creator.github.io/sakibulhabib/",
   objective: "To serve in a dynamic organization where there is an opportunity to utilize my knowledge, experience, education & skill with a scope of continuous career development.",
-  profileSummary: "Willing to take on challenges through a creative and competitive environment where I have the opportunity to assert a strong sense of responsibility as well as to contribute.",
+  profileSummary: "Accomplished Head of IT and University Lecturer in Computer Science & Engineering at UCASM, leading enterprise software engineering, institutional cloud and POS/ERP systems, and Program Coordination, Academic Faculty across collegiate departments.",
   declaration: "I, the undersigned, hereby corroborate that, to the best of my knowledge and belief, the above-furnished information is true and correct.",
   stats: {
     leadershipRoles: "5",
     professionalsTrained: "46+",
     projectsCompleted: "20+",
-    nsdaLevel: "Level 4",
+    nsdaLevel: "UCASM & IT",
   }
 };
 
@@ -116,26 +117,26 @@ export const EXPERIENCES: ExperienceItem[] = [
   },
   {
     id: "asset-project-coordinator-ucast",
-    company: "UCAST, Plannet Group",
-    role: "Asset Project Coordinator",
+    company: "UCAST & UCASM, Plannet Group",
+    role: "Program Coordination, Academic Faculty & Asset Coordinator",
     period: "15 July 2025 – Present",
-    highlightBadge: "Program Management",
+    highlightBadge: "Program Coordination, Academic Faculty",
     locations: [
-      "United College of Aviation Science & Technology (UCAST): House #16, Road #04, Sector #03, Uttara, Dhaka, Bangladesh"
+      "United College of Aviation Science & Management (UCASM) & UCAST: House #16, Road #04, Sector #03, Uttara, Dhaka, Bangladesh"
     ],
     description: [
-      "Coordinate asset-project activities across 10+ academic and technical subjects.",
-      "Maintain project documentation, resource records, task tracking, and coordination between relevant teams.",
-      "Support the planning, implementation, and monitoring of academic and technical projects.",
-      "Assist instructors and project teams with technical resources, systems, and operational requirements.",
-      "Contribute to process improvement, documentation, and efficient project execution."
+      "Oversee Program Coordination, Academic Faculty synchronization, and technical laboratory audits across 10+ academic departments.",
+      "Maintain project documentation, resource records, task tracking, and coordination between faculty members and collegiate teams.",
+      "Support the planning, curriculum delivery, and monitoring of academic and technical student projects.",
+      "Assist instructors and project teams with technical resources, lab systems, and operational requirements.",
+      "Contribute to process improvement, documentation, and efficient project execution across collegiate programs."
     ],
     teamTrained: 8,
     projects: [
-      "Asset Project Across 10+ Academic & Technical Subjects",
+      "Program Coordination Across 10+ Academic & Technical Subjects",
       "Laboratory Resource Tracking & Equipment Audit",
       "Inter-Team Task Tracking & Milestones Coordination",
-      "Technical Operational Systems & Process Improvement"
+      "Technical Operational Systems & Academic Process Improvement"
     ],
     techStack: ["Project Coordination", "Resource Tracking", "System Workflows", "Technical Documentation"]
   },
@@ -565,5 +566,104 @@ export const EDUCATION_TIMELINE: EducationItem[] = [
       "Science discipline with distinction in Mathematics and Science",
       "Extracurricular involvement in scientific exhibitions"
     ]
+  }
+];
+
+export const GALLERY_MEMORIES: GalleryMemoryItem[] = [
+  {
+    id: "memory-passport-official",
+    title: "Official Executive Portrait: Head of IT & Lecturer (UCASM)",
+    category: "Milestone",
+    year: "2025",
+    date: "Current Executive Appointment",
+    location: "City Tech IT & UCASM, Dhaka, Bangladesh",
+    description: "Official executive photograph of Khondoker Sakibul Habib Sakib. Serving as Head of IT at City Tech IT (Plannet Group), Lecturer in the CSE Department at UCASM, and Program Coordination, Academic Faculty at UCAST.",
+    imageUrl: "./my-passport-photo.png",
+    featured: true,
+    tags: ["Official Portrait", "Head of IT", "Lecturer UCASM", "Program Coordination", "Academic Faculty"]
+  },
+  {
+    id: "memory-convocation-iubat",
+    title: "B.Sc. in Computer Science & Engineering Convocation",
+    category: "Academic & Campus",
+    year: "2024",
+    date: "Graduation Milestone",
+    location: "IUBAT Campus, Sector-10, Uttara, Dhaka",
+    description: "A defining academic milestone—conferral of the Bachelor of Science in Computer Science & Engineering (B.Sc CSE) from IUBAT. Commemorating four years of rigorous algorithmic study, AI research, compiler designs, and software development.",
+    imageUrl: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1000&auto=format&fit=crop",
+    featured: true,
+    tags: ["B.Sc CSE", "Graduation", "IUBAT", "Academic Pride"]
+  },
+  {
+    id: "memory-ucasm-lecture-lab",
+    title: "University CSE Lecture & Interactive Lab Sessions",
+    category: "Teaching & Lab",
+    year: "2024 - 2025",
+    date: "Academic Faculty Sessions",
+    location: "UCASM Campus Computer Science Lab, Uttara",
+    description: "Mentoring over 46+ future engineers across web engineering, database architecture, cybersecurity, and algorithms. Guiding hands-on student projects, practical examinations, and technology workshops.",
+    imageUrl: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1000&auto=format&fit=crop",
+    featured: true,
+    tags: ["Lecturer", "CSE Lab", "UCASM", "Mentorship"]
+  },
+  {
+    id: "memory-citytech-it-ops",
+    title: "IT Infrastructure & Enterprise Engineering at City Tech IT",
+    category: "Career & Leadership",
+    year: "2025",
+    date: "IT Leadership & Operations",
+    location: "H.M. Plaza, Uttara Rajlokkhi, Dhaka",
+    description: "Directing high-stakes corporate IT initiatives, developing multi-store POS inventory suites, deploying HR systems, and managing conversion API analytics across Plannet Group operations.",
+    imageUrl: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=1000&auto=format&fit=crop",
+    featured: true,
+    tags: ["City Tech IT", "Plannet Group", "POS & ERP", "Team Leadership"]
+  },
+  {
+    id: "memory-mlh-hackathon",
+    title: "Microsoft MLH Local Hack Day & Coding Marathon",
+    category: "Academic & Campus",
+    year: "2023",
+    date: "Hackathon Sprints",
+    location: "Innovation Lab & Campus Coding Hub, Dhaka",
+    description: "Nostalgic memories of overnight coding marathons, rapid prototyping, and collaborating with developer peers during Microsoft-sponsored MLH Local Hack Day challenges.",
+    imageUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1000&auto=format&fit=crop",
+    featured: false,
+    tags: ["Hackathon", "MLH Local Hack Day", "Prototyping", "Code Sprint"]
+  },
+  {
+    id: "memory-nsda-certification",
+    title: "National Skills Development Authority (NSDA) Recognition",
+    category: "Milestone",
+    year: "2023",
+    date: "National Assessment Certification",
+    location: "NSDA Bangladesh, Prime Minister's Office",
+    description: "Attaining government-recognized NSDA Level 4 credentials in Computer Operation, Digital Marketing for Freelancing, Web Development, and IT Support Services.",
+    imageUrl: "https://images.unsplash.com/photo-1589330694653-ded6df03f754?q=80&w=1000&auto=format&fit=crop",
+    featured: false,
+    tags: ["NSDA Level 4", "Govt Certification", "National Skills"]
+  },
+  {
+    id: "memory-ucast-aviation",
+    title: "UCAST Asset Project Coordination & Lab Modernization",
+    category: "Teaching & Lab",
+    year: "2025",
+    date: "Aviation Campus Projects",
+    location: "United College of Aviation Science & Technology (UCAST), Uttara",
+    description: "Leading technical asset coordination across 10+ academic subjects, managing advanced laboratory resources, and standardizing operational equipment tracking.",
+    imageUrl: "https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=1000&auto=format&fit=crop",
+    featured: false,
+    tags: ["UCAST", "Aviation Tech", "Asset Coordinator", "Laboratory"]
+  },
+  {
+    id: "memory-thesis-assistive",
+    title: "Smart Glass & Assistive Tech Thesis Presentation",
+    category: "Milestone",
+    year: "2024",
+    date: "Research Defense",
+    location: "Department of CSE, IUBAT, Dhaka",
+    description: "Presenting the pioneering Smart Glass for Visually Impaired Individuals research thesis, integrating ultrasonic obstacle proximity detection, auditory feedback, and IoT microcontrollers.",
+    imageUrl: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop",
+    featured: true,
+    tags: ["Research Thesis", "IoT Assistive", "Smart Glass", "Defense"]
   }
 ];

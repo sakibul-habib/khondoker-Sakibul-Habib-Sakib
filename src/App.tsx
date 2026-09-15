@@ -6,6 +6,7 @@ import { Hero } from './components/Hero';
 import { AboutSection } from './components/AboutSection';
 import { ExperienceSection } from './components/ExperienceSection';
 import { ProjectsSection } from './components/ProjectsSection';
+import { GallerySection } from './components/GallerySection';
 import { ThesisSection } from './components/ThesisSection';
 import { SkillsSection } from './components/SkillsSection';
 import { CertificationsSection } from './components/CertificationsSection';
@@ -37,6 +38,7 @@ function MainApp() {
         <AboutSection />
         <ExperienceSection />
         <ProjectsSection />
+        <GallerySection />
         <ThesisSection />
         <SkillsSection />
         <CertificationsSection />

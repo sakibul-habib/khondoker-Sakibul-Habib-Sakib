@@ -42,7 +42,14 @@ export const AboutSection: React.FC = () => {
                     <img
                       src="./my-passport-photo.png"
                       alt="Khondoker Sakibul Habib Sakib"
-                      className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover object-[50%_14%] hover:scale-105 transition-transform duration-300"
+                      onError={(e) => {
+                        const target = e.currentTarget;
+                        if (!target.dataset.triedFallback) {
+                          target.dataset.triedFallback = 'true';
+                          target.src = '/my-passport-photo.png';
+                        }
+                      }}
                     />
                   </div>
                   <span className="absolute -bottom-2 -right-2 px-2 py-0.5 rounded-full bg-emerald-500 text-slate-950 font-bold text-[9px] flex items-center gap-1 shadow">
@@ -58,10 +65,10 @@ export const AboutSection: React.FC = () => {
                   <h3 className="text-lg font-bold font-heading text-slate-900 dark:text-white">
                     {PERSONAL_INFO.name}
                   </h3>
-                  <div className="space-y-1 text-xs text-slate-700 dark:text-slate-300 font-mono">
+                  <div className="space-y-1.5 text-xs text-slate-700 dark:text-slate-300 font-mono">
                     <div className="text-cyan-600 dark:text-cyan-400 font-semibold">• Head of IT — City Tech IT</div>
                     <div className="text-blue-600 dark:text-blue-400 font-semibold">• Lecturer (CSE) — UCASM</div>
-                    <div className="text-purple-600 dark:text-purple-400 font-semibold">• Asset Coordinator — UCAST</div>
+                    <div className="text-purple-600 dark:text-purple-400 font-semibold">• Program Coordination, Academic Faculty — UCASM & UCAST</div>
                   </div>
                   <p className="text-[11px] text-slate-500 dark:text-slate-400 pt-1">
                     Plannet Group • Uttara & Gulshan-1, Dhaka, Bangladesh
@@ -234,8 +241,8 @@ export const AboutSection: React.FC = () => {
                   <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-100 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
                     <span className="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400 mt-1.5 shrink-0" />
                     <div>
-                      <strong className="text-slate-900 dark:text-white block font-medium">Asset Project Coordinator (Plannet Group):</strong>
-                      Led and coordinated the Asset Project covering more than 10 technical & academic subjects, training 8 core team members.
+                      <strong className="text-slate-900 dark:text-white block font-medium">Program Coordination, Academic Faculty (UCASM & UCAST):</strong>
+                      Directing collegiate academic program coordination, laboratory resource audits, and curriculum synchronization across 10+ academic subjects.
                     </div>
                   </div>
                   <div className="flex items-start gap-2.5 p-3 rounded-xl bg-slate-100 dark:bg-slate-950/60 border border-slate-200 dark:border-slate-800">
