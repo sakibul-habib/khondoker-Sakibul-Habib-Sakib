@@ -68,7 +68,7 @@ export const Navbar: React.FC<NavbarProps> = ({
           >
             <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full overflow-hidden border-2 border-cyan-400 shadow-md shadow-cyan-500/25 group-hover:scale-105 transition-transform bg-slate-800">
               <img
-                src="/my-passport-photo.png"
+                src="./my-passport-photo.png"
                 alt="Sakib Habib"
                 className="w-full h-full object-cover object-top"
               />

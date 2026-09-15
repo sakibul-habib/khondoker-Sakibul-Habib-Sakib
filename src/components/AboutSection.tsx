@@ -40,7 +40,7 @@ export const AboutSection: React.FC = () => {
                 <div className="relative shrink-0">
                   <div className="w-28 h-36 sm:w-32 sm:h-40 rounded-xl overflow-hidden border-2 border-cyan-500/60 shadow-lg shadow-cyan-950/50 bg-slate-900">
                     <img
-                      src="/my-passport-photo.png"
+                      src="./my-passport-photo.png"
                       alt="Khondoker Sakibul Habib Sakib"
                       className="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-300"
                     />

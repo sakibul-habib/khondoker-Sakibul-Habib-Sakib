@@ -12,7 +12,7 @@ export const PERSONAL_INFO = {
   name: "KHONDOKER SAKIBUL HABIB SAKIB",
   shortName: "Sakib Habib",
   title: "Head of IT • University Lecturer • Asset Project Coordinator",
-  photoUrl: "/my-passport-photo.png",
+  photoUrl: "./my-passport-photo.png",
   address: "House-11, Road-6, Badda link Road, Gulshan-1, Dhaka-1212, Bangladesh",
   phone: "+8801789557517",
   email: "sakibulhabib@gmail.com",

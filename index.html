@@ -1,21 +1,1446 @@
-<!doctype html>
-<html lang="en" class="scroll-smooth dark">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KHONDOKER SAKIBUL HABIB SAKIB - 3D Portfolio</title>
-    <meta name="description" content="Interactive 3D animated portfolio website for KHONDOKER SAKIBUL HABIB SAKIB, Head of IT, Lecturer, and Full-Stack Software Engineer." />
-    <meta property="og:title" content="KHONDOKER SAKIBUL HABIB SAKIB - 3D Portfolio" />
-    <meta property="og:description" content="Interactive 3D animated portfolio website for KHONDOKER SAKIBUL HABIB SAKIB, Head of IT, Lecturer, and Full-Stack Software Engineer." />
-    <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  </head>
-  <body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 antialiased selection:bg-cyan-500 selection:text-black overflow-x-hidden transition-colors duration-500">
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KHONDOKER SAKIBUL HABIB SAKIB - Executive Portfolio</title>
+  <meta name="description" content="Official Executive Portfolio of Khondoker Sakibul Habib Sakib — Head of IT, University Lecturer, NSDA Level 4 Assessor, and Full-Stack Software Engineer.">
+  <meta property="og:title" content="KHONDOKER SAKIBUL HABIB SAKIB - Executive Portfolio">
+  <meta property="og:description" content="Head of IT, University Lecturer, NSDA Level 4 Assessor, and Full-Stack Software Engineer.">
+  <meta property="og:type" content="website">
 
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3.3 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  
+  <!-- Bootstrap Icons 1.11.3 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- 3D Three.js WebGL Canvas Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Content Layer -->
+  <div class="content-layer">
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom" id="mainNavbar">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#hero">
+          <img src="./my-passport-photo.png" alt="Khondoker Sakibul Habib Sakib" class="navbar-brand-avatar">
+          <div class="d-flex flex-column">
+            <span class="fw-bold brand-font text-white lh-1">Sakib Habib</span>
+            <small class="text-info text-truncate" style="font-size: 0.725rem;">Head of IT • Lecturer</small>
+          </div>
+        </a>
+
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+            <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+
+          <div class="d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0">
+            <!-- Theme Toggle Button -->
+            <button class="btn btn-outline-custom p-2 rounded-circle" id="theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+              <i class="bi bi-sun-fill" id="theme-icon"></i>
+            </button>
+
+            <!-- Printable Official CV Modal Trigger -->
+            <button class="btn btn-cyan btn-sm" data-bs-toggle="modal" data-bs-target="#cvModal">
+              <i class="bi bi-file-earmark-person"></i> View / Print CV
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-wrapper" id="hero">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <div class="hero-role-pill mb-3">
+              <span class="badge bg-cyan text-dark fw-bold me-1" style="background:#06b6d4;">VERIFIED</span>
+              Head of IT • University Lecturer • NSDA Level 4 Assessor
+            </div>
+            
+            <h1 class="hero-name">
+              KHONDOKER SAKIBUL <br>
+              <span class="hero-gradient-text">HABIB SAKIB</span>
+            </h1>
+
+            <p class="hero-bio mb-4">
+              Accomplished IT Executive, Computer Science Lecturer, and Competency-Based Training (CBT&A) Assessor. Directing enterprise software engineering, institutional asset workflows, and collegiate computer science laboratories across the Plannet Group ecosystem.
+            </p>
+
+            <div class="d-flex flex-wrap gap-3 mb-5">
+              <a href="#experience" class="btn btn-cyan">
+                <i class="bi bi-briefcase-fill"></i> Explore Experience
+              </a>
+              <a href="#projects" class="btn btn-outline-custom">
+                <i class="bi bi-laptop"></i> View Enterprise Projects
+              </a>
+              <button class="btn btn-outline-custom" data-bs-toggle="modal" data-bs-target="#cvModal">
+                <i class="bi bi-printer-fill"></i> Official Printable CV
+              </button>
+              <a href="#contact" class="btn btn-outline-custom">
+                <i class="bi bi-envelope-fill"></i> Get in Touch
+              </a>
+            </div>
+
+            <!-- Executive Metric Highlights -->
+            <div class="row g-3">
+              <div class="col-6 col-md-3">
+                <div class="metric-box">
+                  <div class="metric-number">5+</div>
+                  <div class="metric-label">Leadership Roles</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="metric-box">
+                  <div class="metric-number">46+</div>
+                  <div class="metric-label">Engineers Trained</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="metric-box">
+                  <div class="metric-number">20+</div>
+                  <div class="metric-label">Enterprise Projects</div>
+                </div>
+              </div>
+              <div class="col-6 col-md-3">
+                <div class="metric-box">
+                  <div class="metric-number">Level 4</div>
+                  <div class="metric-label">NSDA Assessor</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Hero Right Profile Card -->
+          <div class="col-lg-4 mt-5 mt-lg-0 text-center text-lg-end">
+            <div class="custom-card p-4 d-inline-block text-start" style="max-width: 360px;">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="passport-frame shrink-0">
+                  <img src="./my-passport-photo.png" alt="Khondoker Sakibul Habib Sakib">
+                </div>
+                <div>
+                  <h5 class="mb-1 fw-bold">Sakib Habib</h5>
+                  <p class="text-info small mb-1">Head of IT & Faculty</p>
+                  <span class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-25" style="font-size: 0.7rem;">
+                    <i class="bi bi-check-circle-fill me-1"></i> Active Leadership
+                  </span>
+                </div>
+              </div>
+
+              <div class="small text-muted mb-3 border-top border-bottom border-secondary border-opacity-25 py-2">
+                <div class="mb-1"><i class="bi bi-geo-alt-fill text-info me-2"></i>Dhaka, Bangladesh</div>
+                <div class="mb-1"><i class="bi bi-telephone-fill text-info me-2"></i>+8801789557517</div>
+                <div><i class="bi bi-envelope-fill text-info me-2"></i>sakibulhabib@gmail.com</div>
+              </div>
+
+              <div class="d-flex gap-2 justify-content-center">
+                <a href="https://www.linkedin.com/in/khondoker-sakibul-habib-004b20198/" target="_blank" class="btn btn-sm btn-outline-custom" title="LinkedIn Profile">
+                  <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="https://github.com/khsakib-creator" target="_blank" class="btn btn-sm btn-outline-custom" title="GitHub Repository">
+                  <i class="bi bi-github"></i>
+                </a>
+                <a href="https://khsakib-creator.github.io/sakibulhabib/" target="_blank" class="btn btn-sm btn-outline-custom" title="Personal Website">
+                  <i class="bi bi-globe"></i>
+                </a>
+                <a href="mailto:sakibulhabib@gmail.com" class="btn btn-sm btn-outline-custom" title="Send Email">
+                  <i class="bi bi-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About & Leadership Section -->
+    <section class="section-padding" id="about" style="background: rgba(0,0,0,0.15);">
+      <div class="container">
+        <div class="text-center">
+          <div class="section-badge"><i class="bi bi-person-badge"></i> Executive Profile</div>
+          <h2 class="section-title">Leadership & Academic Background</h2>
+          <p class="section-subtitle">Bridging industrial enterprise architecture, tertiary computer science education, and governmental skill standardization.</p>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-5">
+            <div class="custom-card p-4">
+              <h4 class="fw-bold mb-3"><i class="bi bi-compass text-info me-2"></i> Career Objective</h4>
+              <p class="text-muted mb-4" style="line-height: 1.7;">
+                To serve in a dynamic organization where there is an opportunity to utilize my knowledge, experience, education & skill with a scope of continuous career development. Willing to take on challenges through a creative and competitive environment where I have the opportunity to assert a strong sense of responsibility as well as to contribute.
+              </p>
+
+              <h4 class="fw-bold mb-3"><i class="bi bi-building text-info me-2"></i> Institutional Offices</h4>
+              <ul class="list-unstyled text-muted small mb-0">
+                <li class="mb-3 d-flex gap-2">
+                  <i class="bi bi-geo-alt-fill text-info mt-1"></i>
+                  <div>
+                    <strong class="text-white">United College of Aviation Science & Management (UCASM)</strong><br>
+                    House #16, Road #04, Sector #03, Uttara, Dhaka, Bangladesh.
+                  </div>
+                </li>
+                <li class="mb-3 d-flex gap-2">
+                  <i class="bi bi-geo-alt-fill text-info mt-1"></i>
+                  <div>
+                    <strong class="text-white">United College of Aviation Science & Technology (UCAST)</strong><br>
+                    House #16, Road #04, Sector #03, Uttara, Dhaka, Bangladesh.
+                  </div>
+                </li>
+                <li class="d-flex gap-2">
+                  <i class="bi bi-geo-alt-fill text-info mt-1"></i>
+                  <div>
+                    <strong class="text-white">City Tech IT (Plannet Group)</strong><br>
+                    H.M. Plaza, Lift-14, Suite-1/A, Plot-34, Road-2, Sector-3, Uttara Rajlokkhi, Dhaka-1230.
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="row g-3 h-100">
+              <div class="col-md-6">
+                <div class="custom-card p-4">
+                  <div class="text-info fs-2 mb-2"><i class="bi bi-mortarboard-fill"></i></div>
+                  <h5 class="fw-bold mb-2">University Lecturer</h5>
+                  <p class="text-muted small mb-0">
+                    Faculty lecturer delivering undergraduate courses in Computer Science and Engineering. Mentoring collegiate labs in programming, web architectures, algorithms, and cybersecurity.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="custom-card p-4">
+                  <div class="text-info fs-2 mb-2"><i class="bi bi-cpu-fill"></i></div>
+                  <h5 class="fw-bold mb-2">Head of IT Operations</h5>
+                  <p class="text-muted small mb-0">
+                    Overseeing full organizational software ecosystems, POS ERP deployments, enterprise inventory controls, database integrity, and high-availability digital portals.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="custom-card p-4">
+                  <div class="text-info fs-2 mb-2"><i class="bi bi-patch-check-fill"></i></div>
+                  <h5 class="fw-bold mb-2">NSDA Level 4 Assessor</h5>
+                  <p class="text-muted small mb-0">
+                    Accredited Assessor by National Skills Development Authority (Prime Minister’s Office, Bangladesh) in Competency-Based Training & Assessment (CBT&A), Python, and SEO.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="custom-card p-4">
+                  <div class="text-info fs-2 mb-2"><i class="bi bi-diagram-3-fill"></i></div>
+                  <h5 class="fw-bold mb-2">Asset Project Coordinator</h5>
+                  <p class="text-muted small mb-0">
+                    Leading project workflows, resource management, and laboratory audits across 10+ academic departments and technical faculties at UCAST.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Professional Experience Section -->
+    <section class="section-padding" id="experience">
+      <div class="container">
+        <div class="text-center">
+          <div class="section-badge"><i class="bi bi-briefcase"></i> Track Record</div>
+          <h2 class="section-title">Professional Work Experience</h2>
+          <p class="section-subtitle">Demonstrated history of enterprise IT leadership, academic pedagogy, and cross-functional project management.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            
+            <!-- Experience 1: Head of IT -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date-badge">15 July 2025 – Present</div>
+              <div class="custom-card p-4 mb-3">
+                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                  <div>
+                    <h4 class="fw-bold mb-1">Head of IT</h4>
+                    <div class="text-info fw-semibold">City Tech IT, Plannet Group</div>
+                  </div>
+                  <span class="badge bg-primary bg-opacity-20 text-info border border-info border-opacity-25 px-3 py-2">Executive Leadership</span>
+                </div>
+                <div class="text-muted small mb-3">
+                  <i class="bi bi-geo-alt me-1"></i> H.M. Plaza, Lift-14, Suite-1/A, Plot-34, Road-2, Sector-3, Uttara Rajlokkhi, Dhaka-1230
+                </div>
+                <ul class="text-muted small mb-3 ps-3">
+                  <li>Lead IT operations, software solutions, website development, and technical support across organizational projects.</li>
+                  <li>Manage end-to-end software workflows, system maintenance, troubleshooting, and technology implementation.</li>
+                  <li>Develop and maintain web-based applications, business systems, and digital platforms.</li>
+                  <li>Coordinate digital marketing, SEO, tracking pixels, analytics, and third-party API integrations.</li>
+                  <li>Mentored and supervised 8+ core technical team members, improving productivity and service delivery.</li>
+                </ul>
+                <div>
+                  <span class="tech-pill">Laravel</span>
+                  <span class="tech-pill">PHP</span>
+                  <span class="tech-pill">MySQL</span>
+                  <span class="tech-pill">Meta Pixel & CAPI</span>
+                  <span class="tech-pill">REST APIs</span>
+                  <span class="tech-pill">Linux</span>
+                  <span class="tech-pill">SEO</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Experience 2: Lecturer CSE -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date-badge">15 July 2025 – Present</div>
+              <div class="custom-card p-4 mb-3">
+                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                  <div>
+                    <h4 class="fw-bold mb-1">Lecturer (Department of CSE)</h4>
+                    <div class="text-info fw-semibold">United College of Aviation Science & Management (UCASM)</div>
+                  </div>
+                  <span class="badge bg-success bg-opacity-20 text-success border border-success border-opacity-25 px-3 py-2">Academic Faculty</span>
+                </div>
+                <div class="text-muted small mb-3">
+                  <i class="bi bi-geo-alt me-1"></i> House #16, Road #04, Sector #03, Uttara, Dhaka, Bangladesh
+                </div>
+                <ul class="text-muted small mb-3 ps-3">
+                  <li>Deliver lectures and practical laboratory sessions in Computer Science and Engineering subjects.</li>
+                  <li>Prepare course curricula, assessments, practical examinations, and collegiate learning resources.</li>
+                  <li>Guide students in programming, web development, software engineering, databases, IT support, and cybersecurity.</li>
+                  <li>Support collegiate activities including technical symposiums, orientations, examinations, and coding workshops.</li>
+                </ul>
+                <div>
+                  <span class="tech-pill">Python</span>
+                  <span class="tech-pill">C / C++</span>
+                  <span class="tech-pill">Java</span>
+                  <span class="tech-pill">Databases</span>
+                  <span class="tech-pill">Cybersecurity</span>
+                  <span class="tech-pill">Web Engineering</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Experience 3: Asset Project Coordinator -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date-badge">15 July 2025 – Present</div>
+              <div class="custom-card p-4 mb-3">
+                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                  <div>
+                    <h4 class="fw-bold mb-1">Asset Project Coordinator</h4>
+                    <div class="text-info fw-semibold">United College of Aviation Science & Technology (UCAST)</div>
+                  </div>
+                  <span class="badge bg-warning bg-opacity-20 text-warning border border-warning border-opacity-25 px-3 py-2">Program Coordination</span>
+                </div>
+                <div class="text-muted small mb-3">
+                  <i class="bi bi-geo-alt me-1"></i> House #16, Road #04, Sector #03, Uttara, Dhaka, Bangladesh
+                </div>
+                <ul class="text-muted small mb-3 ps-3">
+                  <li>Coordinate asset-project activities across 10+ academic and technical subjects.</li>
+                  <li>Maintain institutional asset documentation, laboratory equipment audits, and resource tracking.</li>
+                  <li>Facilitate inter-team technical alignment between instructors and engineering departments.</li>
+                </ul>
+                <div>
+                  <span class="tech-pill">Resource Management</span>
+                  <span class="tech-pill">Technical Audits</span>
+                  <span class="tech-pill">Workflow Optimization</span>
+                  <span class="tech-pill">Project Tracking</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Experience 4: Turnago Group -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date-badge">5 Feb 2024 – 15 July 2025</div>
+              <div class="custom-card p-4 mb-3">
+                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                  <div>
+                    <h4 class="fw-bold mb-1">Manager – IT</h4>
+                    <div class="text-info fw-semibold">Turnago Group</div>
+                  </div>
+                  <span class="badge bg-info bg-opacity-20 text-info border border-info border-opacity-25 px-3 py-2">Senior IT Management</span>
+                </div>
+                <div class="text-muted small mb-3">
+                  <i class="bi bi-geo-alt me-1"></i> Islam Mansion (5th Floor), Plot-39, Road-126, Gulshan-1, Dhaka, Bangladesh
+                </div>
+                <ul class="text-muted small mb-3 ps-3">
+                  <li>Oversaw daily operations and end-to-end IT processes across group operations.</li>
+                  <li>Trained more than 18 corporate employees in enterprise workflows and software platforms.</li>
+                  <li>Managed deployment of corporate HR management system, certificate verification engine, and e-commerce portal.</li>
+                </ul>
+                <div>
+                  <span class="tech-pill">PHP</span>
+                  <span class="tech-pill">Laravel</span>
+                  <span class="tech-pill">MySQL</span>
+                  <span class="tech-pill">Bootstrap</span>
+                  <span class="tech-pill">Linux Systems</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Experience 5: UCTIT -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date-badge">1 Oct 2022 – 3 Feb 2024</div>
+              <div class="custom-card p-4 mb-3">
+                <div class="d-flex flex-wrap justify-content-between align-items-start gap-2 mb-2">
+                  <div>
+                    <h4 class="fw-bold mb-1">Manager – Project</h4>
+                    <div class="text-info fw-semibold">Uttara Computer Training & IT Firm (UCTIT)</div>
+                  </div>
+                  <span class="badge bg-secondary bg-opacity-20 text-light border border-secondary border-opacity-25 px-3 py-2">Project Leadership</span>
+                </div>
+                <div class="text-muted small mb-3">
+                  <i class="bi bi-geo-alt me-1"></i> House 37 (3rd Floor), Road 7, Sector 3, Uttara, Dhaka-1230
+                </div>
+                <ul class="text-muted small mb-3 ps-3">
+                  <li>Directed project pipelines, technical training curricula, and software product delivery.</li>
+                  <li>Trained over 20+ software developers and corporate students in full-stack programming.</li>
+                  <li>Supervised development of microfinance loan manager, CGPA calculator, and inventory software.</li>
+                </ul>
+                <div>
+                  <span class="tech-pill">PHP</span>
+                  <span class="tech-pill">JavaScript</span>
+                  <span class="tech-pill">C++</span>
+                  <span class="tech-pill">Java</span>
+                  <span class="tech-pill">Python</span>
+                  <span class="tech-pill">MySQL</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects & Thesis Section -->
+    <section class="section-padding" id="projects" style="background: rgba(0,0,0,0.15);">
+      <div class="container">
+        <div class="text-center">
+          <div class="section-badge"><i class="bi bi-code-square"></i> Solutions Architecture</div>
+          <h2 class="section-title">Enterprise Software & Projects</h2>
+          <p class="section-subtitle">Real-world production systems engineered for corporate ERP, collegiate administration, and assistive IoT robotics.</p>
+
+          <!-- Category Filter Buttons -->
+          <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
+            <button class="filter-btn active" data-filter="all">All Solutions (9)</button>
+            <button class="filter-btn" data-filter="erp">Enterprise ERP & POS</button>
+            <button class="filter-btn" data-filter="academic">Academic & Utility</button>
+            <button class="filter-btn" data-filter="web">Web Applications</button>
+            <button class="filter-btn" data-filter="api">APIs & Marketing</button>
+          </div>
+        </div>
+
+        <!-- Featured Thesis Spotlight -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-12">
+            <div class="custom-card p-4 p-md-5 border-info border-opacity-50" style="background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(6,182,212,0.1));">
+              <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                <span class="badge bg-cyan text-dark fw-bold px-3 py-2">FEATURED B.SC THESIS PROJECT</span>
+                <span class="text-info small fw-bold">Computer Vision • Embedded Systems • Assistive Robotics</span>
+              </div>
+
+              <div class="row align-items-center g-4">
+                <div class="col-lg-8">
+                  <h3 class="fw-bold mb-2">Smart Glass for Blind People</h3>
+                  <div class="text-muted fw-semibold mb-3">Assistive IoT & Embedded Sensory Wearable System (IUBAT)</div>
+                  <p class="text-muted mb-4" style="line-height: 1.7;">
+                    An innovative assistive wearable engineered to empower visually impaired individuals with sensory feedback, obstacle detection, ultrasonic echo-location, and auditory guidance—significantly increasing safety and independence in both indoor and outdoor environments.
+                  </p>
+
+                  <div class="row g-3 mb-4">
+                    <div class="col-sm-6">
+                      <div class="d-flex gap-2">
+                        <i class="bi bi-radar text-info fs-4"></i>
+                        <div>
+                          <strong class="d-block text-white">Ultrasonic Proximity Array</strong>
+                          <small class="text-muted">Twin sensors scanning obstacles from 2cm to 400cm in real-time.</small>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="d-flex gap-2">
+                        <i class="bi bi-volume-up text-info fs-4"></i>
+                        <div>
+                          <strong class="d-block text-white">Haptic & Audio Guidance</strong>
+                          <small class="text-muted">Bone-conduction cues & frequency-modulated proximity vibrations.</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4">
+                  <div class="row g-2">
+                    <div class="col-6">
+                      <div class="metric-box">
+                        <div class="metric-number" style="font-size:1.5rem;">0.02 - 4m</div>
+                        <div class="metric-label">Detection Range</div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="metric-box">
+                        <div class="metric-number" style="font-size:1.5rem;">&lt; 50ms</div>
+                        <div class="metric-label">Sensor Latency</div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="metric-box">
+                        <div class="metric-number" style="font-size:1.5rem;">180° Cone</div>
+                        <div class="metric-label">Safety Coverage</div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="metric-box">
+                        <div class="metric-number" style="font-size:1.5rem;">12+ Hours</div>
+                        <div class="metric-label">Battery Life</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="row g-4" id="project-grid">
+          
+          <!-- Project 1 -->
+          <div class="col-md-6 col-lg-4 project-item" data-category="erp">
+            <div class="custom-card p-4 d-flex flex-column h-100">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-secondary bg-opacity-25 text-info">Enterprise ERP & POS</span>
+                <small class="text-muted">City Tech IT</small>
+              </div>
+              <h5 class="fw-bold mb-2">POS & Inventory Management Suite</h5>
+              <p class="text-muted small flex-grow-1" style="line-height: 1.6;">
+                Full-scale point of sale and inventory management suite with barcode scanning, automated stock recalculations, multi-warehouse tracking, and daily invoice receipts.
+              </p>
+              <div class="mb-3">
+                <span class="tech-pill">Laravel</span>
+                <span class="tech-pill">PHP</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">Bootstrap</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary border-opacity-25">
+                <small class="text-success"><i class="bi bi-check-circle me-1"></i> Production Deployed</small>
+                <a href="https://github.com/khsakib-creator" target="_blank" class="btn btn-sm btn-outline-custom"><i class="bi bi-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="col-md-6 col-lg-4 project-item" data-category="erp">
+            <div class="custom-card p-4 d-flex flex-column h-100">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-secondary bg-opacity-25 text-info">Enterprise ERP & POS</span>
+                <small class="text-muted">Plannet Group</small>
+              </div>
+              <h5 class="fw-bold mb-2">Enterprise HR Management System</h5>
+              <p class="text-muted small flex-grow-1" style="line-height: 1.6;">
+                Unified corporate human resources platform managing staff profiles, leave workflows, attendance logs, performance appraisals, and payroll disbursement for 100+ staff.
+              </p>
+              <div class="mb-3">
+                <span class="tech-pill">PHP</span>
+                <span class="tech-pill">Laravel</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">Ajax</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary border-opacity-25">
+                <small class="text-success"><i class="bi bi-check-circle me-1"></i> Deployed</small>
+                <a href="https://github.com/khsakib-creator" target="_blank" class="btn btn-sm btn-outline-custom"><i class="bi bi-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="col-md-6 col-lg-4 project-item" data-category="academic">
+            <div class="custom-card p-4 d-flex flex-column h-100">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-secondary bg-opacity-25 text-info">Academic & Utility</span>
+                <small class="text-muted">UCASM</small>
+              </div>
+              <h5 class="fw-bold mb-2">Student Attendance System</h5>
+              <p class="text-muted small flex-grow-1" style="line-height: 1.6;">
+                Academic attendance tracking platform designed for colleges to log daily lecture presence, track absent alerts, and generate semester percentage summaries.
+              </p>
+              <div class="mb-3">
+                <span class="tech-pill">Django</span>
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">Chart.js</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary border-opacity-25">
+                <small class="text-success"><i class="bi bi-check-circle me-1"></i> Active in 10+ Depts</small>
+                <a href="https://github.com/khsakib-creator" target="_blank" class="btn btn-sm btn-outline-custom"><i class="bi bi-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="col-md-6 col-lg-4 project-item" data-category="api">
+            <div class="custom-card p-4 d-flex flex-column h-100">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-secondary bg-opacity-25 text-info">APIs & Marketing</span>
+                <small class="text-muted">Plannet Group</small>
+              </div>
+              <h5 class="fw-bold mb-2">Meta Pixel & Conversions API (CAPI)</h5>
+              <p class="text-muted small flex-grow-1" style="line-height: 1.6;">
+                Sophisticated event tracking engine integrating Meta Conversions API (CAPI), Google Tag Manager, and custom analytics pixels for cookieless attribution tracking.
+              </p>
+              <div class="mb-3">
+                <span class="tech-pill">Meta CAPI</span>
+                <span class="tech-pill">GTM</span>
+                <span class="tech-pill">Python</span>
+                <span class="tech-pill">PHP</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary border-opacity-25">
+                <small class="text-info"><i class="bi bi-graph-up me-1"></i> 95%+ Match Quality</small>
+                <a href="https://github.com/khsakib-creator" target="_blank" class="btn btn-sm btn-outline-custom"><i class="bi bi-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="col-md-6 col-lg-4 project-item" data-category="web">
+            <div class="custom-card p-4 d-flex flex-column h-100">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-secondary bg-opacity-25 text-info">Web Applications</span>
+                <small class="text-muted">Turnago Group</small>
+              </div>
+              <h5 class="fw-bold mb-2">Certificate Verification Portal</h5>
+              <p class="text-muted small flex-grow-1" style="line-height: 1.6;">
+                Anti-tamper credential issuance engine enabling instant validation with dynamic QR code scanning and cryptographic validation preventing duplication.
+              </p>
+              <div class="mb-3">
+                <span class="tech-pill">Laravel</span>
+                <span class="tech-pill">PHP</span>
+                <span class="tech-pill">QR Engine</span>
+                <span class="tech-pill">MySQL</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary border-opacity-25">
+                <small class="text-success"><i class="bi bi-shield-check me-1"></i> Cryptographic Verify</small>
+                <a href="https://github.com/khsakib-creator" target="_blank" class="btn btn-sm btn-outline-custom"><i class="bi bi-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div class="col-md-6 col-lg-4 project-item" data-category="erp">
+            <div class="custom-card p-4 d-flex flex-column h-100">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-secondary bg-opacity-25 text-info">Enterprise ERP & POS</span>
+                <small class="text-muted">UCTIT</small>
+              </div>
+              <h5 class="fw-bold mb-2">Loan & Microfinance System</h5>
+              <p class="text-muted small flex-grow-1" style="line-height: 1.6;">
+                Financial loan approval, amortization engine, and installment repayment tracking system with compound/reducing balance accounting algorithms.
+              </p>
+              <div class="mb-3">
+                <span class="tech-pill">PHP</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">HTML5</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary border-opacity-25">
+                <small class="text-success"><i class="bi bi-cash-coin me-1"></i> Discrepancy Zero</small>
+                <a href="https://github.com/khsakib-creator" target="_blank" class="btn btn-sm btn-outline-custom"><i class="bi bi-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 7 -->
+          <div class="col-md-6 col-lg-4 project-item" data-category="web">
+            <div class="custom-card p-4 d-flex flex-column h-100">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-secondary bg-opacity-25 text-info">Web Applications</span>
+                <small class="text-muted">Multi-Brand</small>
+              </div>
+              <h5 class="fw-bold mb-2">Custom E-Commerce Platform</h5>
+              <p class="text-muted small flex-grow-1" style="line-height: 1.6;">
+                High-performance online shopping storefront featuring dynamic catalog browsing, shopping cart, promo vouchers, and integrated local payment gateways.
+              </p>
+              <div class="mb-3">
+                <span class="tech-pill">Laravel</span>
+                <span class="tech-pill">Django</span>
+                <span class="tech-pill">MySQL</span>
+                <span class="tech-pill">Payment Gateways</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary border-opacity-25">
+                <small class="text-success"><i class="bi bi-cart-check me-1"></i> Multi-Gateways</small>
+                <a href="https://github.com/khsakib-creator" target="_blank" class="btn btn-sm btn-outline-custom"><i class="bi bi-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 8 -->
+          <div class="col-md-6 col-lg-4 project-item" data-category="academic">
+            <div class="custom-card p-4 d-flex flex-column h-100">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="badge bg-secondary bg-opacity-25 text-info">Academic & Utility</span>
+                <small class="text-muted">University Port</small>
+              </div>
+              <h5 class="fw-bold mb-2">University CGPA Calculator</h5>
+              <p class="text-muted small flex-grow-1" style="line-height: 1.6;">
+                Academic calculation tool allowing university students to calculate semester GPA, cumulative CGPA, target grade projections, and credit weighting (UGC standard).
+              </p>
+              <div class="mb-3">
+                <span class="tech-pill">JavaScript</span>
+                <span class="tech-pill">C++ Engine</span>
+                <span class="tech-pill">HTML5</span>
+                <span class="tech-pill">CSS3</span>
+              </div>
+              <div class="d-flex justify-content-between align-items-center pt-2 border-top border-secondary border-opacity-25">
+                <small class="text-info"><i class="bi bi-calculator me-1"></i> UGC Bangladesh 4.0</small>
+                <a href="https://github.com/khsakib-creator" target="_blank" class="btn btn-sm btn-outline-custom"><i class="bi bi-github"></i> Code</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Technical Competencies -->
+    <section class="section-padding" id="skills">
+      <div class="container">
+        <div class="text-center">
+          <div class="section-badge"><i class="bi bi-tools"></i> Competencies</div>
+          <h2 class="section-title">Technical Skills & Expertise</h2>
+          <p class="section-subtitle">Proficiencies developed across years of full-stack programming, IT management, and university-level instruction.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Category 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="custom-card p-4 h-100">
+              <h5 class="fw-bold mb-3 text-info"><i class="bi bi-globe2 me-2"></i> Web & Backend</h5>
+              
+              <div class="skill-bar-container">
+                <div class="skill-info"><span>Laravel (PHP)</span><span>95%</span></div>
+                <div class="skill-progress"><div class="skill-progress-fill" style="width: 95%;"></div></div>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-info"><span>Django (Python)</span><span>90%</span></div>
+                <div class="skill-progress"><div class="skill-progress-fill" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-info"><span>PHP (OOP / 8.x)</span><span>95%</span></div>
+                <div class="skill-progress"><div class="skill-progress-fill" style="width: 95%;"></div></div>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-info"><span>MySQL & RDBMS</span><span>92%</span></div>
+                <div class="skill-progress"><div class="skill-progress-fill" style="width: 92%;"></div></div>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-info"><span>Bootstrap & CSS3</span><span>96%</span></div>
+                <div class="skill-progress"><div class="skill-progress-fill" style="width: 96%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="custom-card p-4 h-100">
+              <h5 class="fw-bold mb-3 text-info"><i class="bi bi-code-slash me-2"></i> Programming</h5>
+              
+              <div class="skill-bar-container">
+                <div class="skill-info"><span>Python</span><span>92%</span></div>
+                <div class="skill-progress"><div class="skill-progress-fill" style="width: 92%;"></div></div>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-info"><span>C & C++</span><span>88%</span></div>
+                <div class="skill-progress"><div class="skill-progress-fill" style="width: 88%;"></div></div>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-info"><span>Java</span><span>85%</span></div>
+                <div class="skill-progress"><div class="skill-progress-fill" style="width: 85%;"></div></div>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-info"><span>Flutter (Dart)</span><span>85%</span></div>
+                <div class="skill-progress"><div class="skill-progress-fill" style="width: 85%;"></div></div>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-info"><span>C# (.NET)</span><span>82%</span></div>
+                <div class="skill-progress"><div class="skill-progress-fill" style="width: 82%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="custom-card p-4 h-100">
+              <h5 class="fw-bold mb-3 text-info"><i class="bi bi-graph-up-arrow me-2"></i> Growth & Marketing</h5>
+              
+              <div class="skill-bar-container">
+                <div class="skill-info"><span>Meta CAPI & Tracking</span><span>92%</span></div>
+                <div class="skill-progress"><div class="skill-progress-fill" style="width: 92%;"></div></div>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-info"><span>Technical SEO</span><span>90%</span></div>
+                <div class="skill-progress"><div class="skill-progress-fill" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-info"><span>Product Management</span><span>94%</span></div>
+                <div class="skill-progress"><div class="skill-progress-fill" style="width: 94%;"></div></div>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-info"><span>Vector Graphic Design</span><span>88%</span></div>
+                <div class="skill-progress"><div class="skill-progress-fill" style="width: 88%;"></div></div>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-info"><span>Google Tag Manager</span><span>91%</span></div>
+                <div class="skill-progress"><div class="skill-progress-fill" style="width: 91%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="custom-card p-4 h-100">
+              <h5 class="fw-bold mb-3 text-info"><i class="bi bi-shield-lock me-2"></i> Systems & Cloud</h5>
+              
+              <div class="skill-bar-container">
+                <div class="skill-info"><span>Agile SDLC</span><span>94%</span></div>
+                <div class="skill-progress"><div class="skill-progress-fill" style="width: 94%;"></div></div>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-info"><span>Algorithms & Logic</span><span>90%</span></div>
+                <div class="skill-progress"><div class="skill-progress-fill" style="width: 90%;"></div></div>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-info"><span>Software QA & Testing</span><span>89%</span></div>
+                <div class="skill-progress"><div class="skill-progress-fill" style="width: 89%;"></div></div>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-info"><span>Security Principles</span><span>88%</span></div>
+                <div class="skill-progress"><div class="skill-progress-fill" style="width: 88%;"></div></div>
+              </div>
+              <div class="skill-bar-container">
+                <div class="skill-info"><span>Linux Server Admin</span><span>86%</span></div>
+                <div class="skill-progress"><div class="skill-progress-fill" style="width: 86%;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NSDA Certifications Section -->
+    <section class="section-padding" id="certifications" style="background: rgba(0,0,0,0.15);">
+      <div class="container">
+        <div class="text-center">
+          <div class="section-badge"><i class="bi bi-award"></i> Accreditation</div>
+          <h2 class="section-title">NSDA & Professional Certifications</h2>
+          <p class="section-subtitle">Accredited by National Skills Development Authority (Prime Minister's Office, Bangladesh) and Global Industry Leaders.</p>
+        </div>
+
+        <!-- NSDA Table Card -->
+        <div class="row justify-content-center mb-5">
+          <div class="col-lg-10">
+            <div class="custom-card p-4">
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="p-2 bg-info bg-opacity-25 rounded text-info fs-4"><i class="bi bi-shield-fill-check"></i></div>
+                <div>
+                  <h4 class="fw-bold mb-0">National Skills Development Authority (NSDA) Certifications</h4>
+                  <small class="text-muted">Prime Minister’s Office, Government of the People’s Republic of Bangladesh</small>
+                </div>
+              </div>
+
+              <div class="table-responsive">
+                <table class="table table-dark table-hover table-striped align-middle mb-0" style="background: transparent;">
+                  <thead>
+                    <tr class="text-info border-secondary">
+                      <th scope="col" style="width: 60px;">SL</th>
+                      <th scope="col">Occupation / Standard Title</th>
+                      <th scope="col" style="width: 130px;">Level</th>
+                      <th scope="col">Accreditation Body</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td><strong>Computer Operation</strong></td>
+                      <td><span class="badge bg-secondary">Level 2</span></td>
+                      <td class="small text-muted">NSDA Bangladesh</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td><strong>Digital Marketing for Freelancing</strong></td>
+                      <td><span class="badge bg-primary">Level 3</span></td>
+                      <td class="small text-muted">NSDA Bangladesh</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td><strong>Web Design and Development for Freelancing</strong></td>
+                      <td><span class="badge bg-primary">Level 3</span></td>
+                      <td class="small text-muted">NSDA Bangladesh</td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td><strong>IT Support Service</strong></td>
+                      <td><span class="badge bg-primary">Level 3</span></td>
+                      <td class="small text-muted">NSDA Bangladesh</td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td><strong>CBT&A (Competency-Based Training & Assessment)</strong></td>
+                      <td><span class="badge bg-cyan text-dark fw-bold">Level 4</span></td>
+                      <td class="small text-muted">NSDA Bangladesh</td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td><strong>Web Application Development with Python</strong></td>
+                      <td><span class="badge bg-cyan text-dark fw-bold">Level 4</span></td>
+                      <td class="small text-muted">NSDA Bangladesh</td>
+                    </tr>
+                    <tr>
+                      <td>7</td>
+                      <td><strong>Search Engine Optimization (SEO)</strong></td>
+                      <td><span class="badge bg-cyan text-dark fw-bold">Level 4</span></td>
+                      <td class="small text-muted">NSDA Bangladesh</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other Certifications Grid -->
+        <div class="row g-3">
+          <div class="col-md-6 col-lg-4">
+            <div class="custom-card p-3 h-100">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-microsoft text-info fs-5"></i>
+                <h6 class="fw-bold mb-0">MLH Local Hack Day</h6>
+              </div>
+              <small class="text-muted d-block mb-1">Major League Hacking (Sponsored by Microsoft) • IUBAT</small>
+              <p class="text-muted small mb-0">Rapid software hackathon prototyping and team programming competition.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="custom-card p-3 h-100">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-shield-check text-info fs-5"></i>
+                <h6 class="fw-bold mb-0">Digital Security Agency Certification</h6>
+              </div>
+              <small class="text-muted d-block mb-1">ICT Division, Bangladesh</small>
+              <p class="text-muted small mb-0">Cybersecurity essentials, safe digital transactions, and infrastructure hygiene.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="custom-card p-3 h-100">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-palette text-info fs-5"></i>
+                <h6 class="fw-bold mb-0">Graphics Design: Corporate Flyer</h6>
+              </div>
+              <small class="text-muted d-block mb-1">a2i (Aspire to Innovate) Bangladesh</small>
+              <p class="text-muted small mb-0">Corporate identity branding, vector layout design, and typography standards.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="custom-card p-3 h-100">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-phone text-info fs-5"></i>
+                <h6 class="fw-bold mb-0">Introduction to Flutter</h6>
+              </div>
+              <small class="text-muted d-block mb-1">SkillUp</small>
+              <p class="text-muted small mb-0">Cross-platform mobile application development with Dart.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="custom-card p-3 h-100">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-terminal text-info fs-5"></i>
+                <h6 class="fw-bold mb-0">C Programming Masterclass</h6>
+              </div>
+              <small class="text-muted d-block mb-1">Udemy</small>
+              <p class="text-muted small mb-0">Pointers, memory management, low-level data structures, and algorithms.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-4">
+            <div class="custom-card p-3 h-100">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <i class="bi bi-book text-info fs-5"></i>
+                <h6 class="fw-bold mb-0">Book Reading Programme 2019</h6>
+              </div>
+              <small class="text-muted d-block mb-1">British Council</small>
+              <p class="text-muted small mb-0">Advanced English literature comprehension and professional communication.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education Timeline Section -->
+    <section class="section-padding" id="education">
+      <div class="container">
+        <div class="text-center">
+          <div class="section-badge"><i class="bi bi-mortarboard"></i> Academic Qualifications</div>
+          <h2 class="section-title">Educational Milestones</h2>
+          <p class="section-subtitle">Academic foundations in Computer Science & Engineering from leading Bangladeshi universities.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            
+            <!-- Degree 1: JU PMSCS -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date-badge">2026 (Ongoing)</div>
+              <div class="custom-card p-4 mb-3">
+                <div class="d-flex justify-content-between align-items-start mb-1">
+                  <h5 class="fw-bold mb-0">Professional Master of Science in Computer Science (PMSCS)</h5>
+                  <span class="badge bg-warning bg-opacity-25 text-warning">Ongoing</span>
+                </div>
+                <div class="text-info fw-semibold mb-2">Jahangirnagar University (JU), Bangladesh</div>
+                <ul class="text-muted small mb-0 ps-3">
+                  <li>Advanced algorithm design and distributed computing systems.</li>
+                  <li>Software system architecture, database intelligence, and data engineering.</li>
+                  <li>Post-graduate research methodology.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Degree 2: B.Sc CSE IUBAT -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date-badge">2024 (Completed)</div>
+              <div class="custom-card p-4 mb-3">
+                <div class="d-flex justify-content-between align-items-start mb-1">
+                  <h5 class="fw-bold mb-0">Bachelor of Science in Computer Science & Engineering (B.Sc CSE)</h5>
+                  <span class="badge bg-success bg-opacity-25 text-success">Completed</span>
+                </div>
+                <div class="text-info fw-semibold mb-2">International University of Business Agriculture & Technology (IUBAT)</div>
+                <ul class="text-muted small mb-0 ps-3">
+                  <li>Graduation Thesis: Smart Glass for Blind People (Assistive IoT Wearable System).</li>
+                  <li>Core coursework: OOP, Data Structures, Compiler Design, AI, Database Management, Web Engineering.</li>
+                  <li>Participant in Microsoft-sponsored MLH Local Hack Day at IUBAT.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Degree 3: HSC -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date-badge">2019 (Completed)</div>
+              <div class="custom-card p-4 mb-3">
+                <div class="d-flex justify-content-between align-items-start mb-1">
+                  <h5 class="fw-bold mb-0">Higher Secondary School Certificate (HSC)</h5>
+                  <span class="badge bg-secondary bg-opacity-25 text-muted">Completed</span>
+                </div>
+                <div class="text-info fw-semibold mb-2">Sadullapur Government College (SGC) • Dinajpur Board</div>
+                <p class="text-muted small mb-0">Science Discipline: Mathematics, Physics, Chemistry, and Information & Communication Technology (ICT).</p>
+              </div>
+            </div>
+
+            <!-- Degree 4: SSC -->
+            <div class="timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-date-badge">2016 (Completed)</div>
+              <div class="custom-card p-4 mb-3">
+                <div class="d-flex justify-content-between align-items-start mb-1">
+                  <h5 class="fw-bold mb-0">Secondary School Certificate (SSC)</h5>
+                  <span class="badge bg-secondary bg-opacity-25 text-muted">Completed</span>
+                </div>
+                <div class="text-info fw-semibold mb-2">Sadullapur ML Pilot High School • Dinajpur Board</div>
+                <p class="text-muted small mb-0">Science discipline with academic distinction in Mathematics and Science.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Direct Inquiries Section -->
+    <section class="section-padding" id="contact" style="background: rgba(0,0,0,0.15);">
+      <div class="container">
+        <div class="text-center">
+          <div class="section-badge"><i class="bi bi-chat-dots"></i> Direct Communication</div>
+          <h2 class="section-title">Get in Touch</h2>
+          <p class="section-subtitle">Available for institutional IT leadership, guest university lectures, and consultancy inquiries.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-5">
+            <div class="custom-card p-4 h-100">
+              <h4 class="fw-bold mb-4"><i class="bi bi-person-lines-fill text-info me-2"></i> Contact Information</h4>
+
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="p-3 bg-info bg-opacity-10 rounded text-info fs-5"><i class="bi bi-telephone-fill"></i></div>
+                <div>
+                  <small class="text-muted d-block">Phone / WhatsApp</small>
+                  <a href="tel:+8801789557517" class="text-white text-decoration-none fw-semibold">+880 1789-557517</a>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="p-3 bg-info bg-opacity-10 rounded text-info fs-5"><i class="bi bi-envelope-fill"></i></div>
+                <div>
+                  <small class="text-muted d-block">Primary Email</small>
+                  <a href="mailto:sakibulhabib@gmail.com" class="text-white text-decoration-none fw-semibold">sakibulhabib@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="p-3 bg-info bg-opacity-10 rounded text-info fs-5"><i class="bi bi-envelope-paper-fill"></i></div>
+                <div>
+                  <small class="text-muted d-block">Corporate Email</small>
+                  <a href="mailto:ctit.sakib@gmail.com" class="text-white text-decoration-none fw-semibold">ctit.sakib@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="d-flex align-items-center gap-3 mb-4">
+                <div class="p-3 bg-info bg-opacity-10 rounded text-info fs-5"><i class="bi bi-geo-alt-fill"></i></div>
+                <div>
+                  <small class="text-muted d-block">Residence / Location</small>
+                  <span class="text-white fw-semibold small">House-11, Road-6, Badda link Road, Gulshan-1, Dhaka-1212</span>
+                </div>
+              </div>
+
+              <div class="pt-3 border-top border-secondary border-opacity-25">
+                <small class="text-muted d-block mb-2">Professional Profiles</small>
+                <div class="d-flex gap-2">
+                  <a href="https://www.linkedin.com/in/khondoker-sakibul-habib-004b20198/" target="_blank" class="btn btn-outline-custom btn-sm">
+                    <i class="bi bi-linkedin me-1"></i> LinkedIn
+                  </a>
+                  <a href="https://github.com/khsakib-creator" target="_blank" class="btn btn-outline-custom btn-sm">
+                    <i class="bi bi-github me-1"></i> GitHub
+                  </a>
+                  <a href="https://khsakib-creator.github.io/sakibulhabib/" target="_blank" class="btn btn-outline-custom btn-sm">
+                    <i class="bi bi-globe me-1"></i> Web
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="col-lg-6">
+            <div class="custom-card p-4 h-100">
+              <h4 class="fw-bold mb-3"><i class="bi bi-send text-info me-2"></i> Send a Direct Message</h4>
+              <p class="text-muted small mb-4">Submit your details below and your email client will be prepared for immediate dispatch.</p>
+
+              <form id="contact-form">
+                <div class="row g-3 mb-3">
+                  <div class="col-sm-6">
+                    <label for="contact-name" class="form-label small text-muted">Your Full Name *</label>
+                    <input type="text" class="form-control bg-dark text-white border-secondary" id="contact-name" placeholder="e.g. John Doe" required>
+                  </div>
+                  <div class="col-sm-6">
+                    <label for="contact-email" class="form-label small text-muted">Email Address *</label>
+                    <input type="email" class="form-control bg-dark text-white border-secondary" id="contact-email" placeholder="name@organization.com" required>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="contact-subject" class="form-label small text-muted">Subject</label>
+                  <input type="text" class="form-control bg-dark text-white border-secondary" id="contact-subject" placeholder="Project Inquiry / Academic Session">
+                </div>
+
+                <div class="mb-3">
+                  <label for="contact-message" class="form-label small text-muted">Message Details *</label>
+                  <textarea class="form-control bg-dark text-white border-secondary" id="contact-message" rows="4" placeholder="Briefly describe your objectives or inquiry..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-cyan w-100 py-2">
+                  <i class="bi bi-send-fill"></i> Dispatch Message
+                </button>
+
+                <div id="form-alert" class="d-none"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 border-top border-secondary border-opacity-25" style="background: var(--bg-secondary);">
+      <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <div class="small text-muted">
+          &copy; <span id="currentYear">2026</span> <strong>KHONDOKER SAKIBUL HABIB SAKIB</strong>. All rights reserved.
+        </div>
+        <div class="d-flex gap-3 small">
+          <a href="#hero" class="text-muted text-decoration-none hover-cyan">Home</a>
+          <a href="#about" class="text-muted text-decoration-none hover-cyan">About</a>
+          <a href="#experience" class="text-muted text-decoration-none hover-cyan">Experience</a>
+          <a href="#projects" class="text-muted text-decoration-none hover-cyan">Projects</a>
+          <a href="#contact" class="text-muted text-decoration-none hover-cyan">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /content-layer -->
+
+  <!-- Printable Official 3-Page CV Modal -->
+  <div class="modal fade" id="cvModal" tabindex="-1" aria-labelledby="cvModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-scrollable">
+      <div class="modal-content modal-content-custom">
+        <div class="modal-header modal-header-custom d-flex justify-content-between align-items-center">
+          <div class="d-flex align-items-center gap-2">
+            <i class="bi bi-file-earmark-text text-info fs-4"></i>
+            <div>
+              <h5 class="modal-title fw-bold mb-0" id="cvModalLabel">Curriculum Vitae — Khondoker Sakibul Habib Sakib</h5>
+              <small class="text-muted">Executive & Academic Curriculum Vitae (Printable Format)</small>
+            </div>
+          </div>
+          <div class="d-flex gap-2">
+            <button type="button" class="btn btn-cyan btn-sm" onclick="window.print();">
+              <i class="bi bi-printer-fill me-1"></i> Print / Save as PDF
+            </button>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        </div>
+
+        <div class="modal-body modal-body-custom">
+          <!-- The printable CV sheet container -->
+          <div class="cv-paper">
+            
+            <!-- Header with Photo and Info -->
+            <div class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-start gap-4 pb-3 border-bottom border-dark">
+              <div>
+                <h1 class="cv-header-title">KHONDOKER SAKIBUL HABIB SAKIB</h1>
+                <div class="fw-bold text-secondary mb-2" style="font-size: 1.05rem;">
+                  Head of IT • University Lecturer • Asset Project Coordinator
+                </div>
+                <div style="font-size: 0.85rem; color: #334155; line-height: 1.5;">
+                  <div><strong>Address:</strong> House-11, Road-6, Badda link Road, Gulshan-1, Dhaka-1212, Bangladesh</div>
+                  <div><strong>Mobile:</strong> +880 1789-557517 | <strong>Email:</strong> sakibulhabib@gmail.com / ctit.sakib@gmail.com</div>
+                  <div><strong>LinkedIn:</strong> linkedin.com/in/khondoker-sakibul-habib-004b20198/ | <strong>GitHub:</strong> github.com/khsakib-creator</div>
+                </div>
+              </div>
+              <div class="shrink-0 text-center">
+                <img src="./my-passport-photo.png" alt="Sakib Habib" style="width: 110px; height: 135px; object-fit: cover; object-position: top; border: 1px solid #94a3b8; border-radius: 4px;">
+              </div>
+            </div>
+
+            <!-- Career Objective -->
+            <div class="cv-section-heading">Career Objective</div>
+            <p>
+              To serve in a dynamic organization where there is an opportunity to utilize my knowledge, experience, education & skill with a scope of continuous career development. Willing to take on challenges through a creative and competitive environment where I have the opportunity to assert a strong sense of responsibility as well as to contribute.
+            </p>
+
+            <!-- Academic Qualifications -->
+            <div class="cv-section-heading">Academic Qualifications</div>
+            <table class="cv-table">
+              <thead>
+                <tr>
+                  <th>Degree Title</th>
+                  <th>Institution / University</th>
+                  <th>Board / Affiliation</th>
+                  <th>Year</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>PMSCS (Computer Science)</strong></td>
+                  <td>Jahangirnagar University (JU)</td>
+                  <td>Dhaka, Bangladesh</td>
+                  <td>2026</td>
+                  <td>Ongoing</td>
+                </tr>
+                <tr>
+                  <td><strong>B.Sc in CSE</strong></td>
+                  <td>IUBAT (International University of Business Agriculture & Tech)</td>
+                  <td>Dhaka, Bangladesh</td>
+                  <td>2024</td>
+                  <td>Completed</td>
+                </tr>
+                <tr>
+                  <td><strong>HSC (Science)</strong></td>
+                  <td>Sadullapur Government College (SGC)</td>
+                  <td>Dinajpur Board</td>
+                  <td>2019</td>
+                  <td>Completed</td>
+                </tr>
+                <tr>
+                  <td><strong>SSC (Science)</strong></td>
+                  <td>Sadullapur ML Pilot High School</td>
+                  <td>Dinajpur Board</td>
+                  <td>2016</td>
+                  <td>Completed</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!-- B.Sc Thesis -->
+            <div class="cv-section-heading">Undergraduate Graduation Thesis</div>
+            <p class="mb-1"><strong>Title:</strong> Smart Glass for Blind People (Assistive IoT & Embedded Sensor System)</p>
+            <p class="small text-muted mb-0">
+              Engineered an assistive wearable prototype integrating dual ultrasonic sensors, haptic feedback pulses, and bone-conduction audio cues to enable visually impaired individuals to safely navigate indoor and outdoor environments.
+            </p>
+
+            <!-- Employment Records -->
+            <div class="cv-section-heading">Employment & Professional History</div>
+            
+            <div class="mb-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="cv-job-title">Head of IT</span>
+                <span class="small fw-bold">15 July 2025 – Present</span>
+              </div>
+              <div class="cv-company">City Tech IT, Plannet Group — Uttara, Dhaka</div>
+              <ul class="small mb-0 ps-3">
+                <li>Direct end-to-end software operations, inventory ERPs with POS integration, and digital platform security.</li>
+                <li>Implement digital tracking pixels, Meta Conversions API (CAPI), and corporate cloud infrastructure.</li>
+                <li>Trained and supervised 8 core engineers and technical specialists.</li>
+              </ul>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="cv-job-title">Lecturer (Department of CSE)</span>
+                <span class="small fw-bold">15 July 2025 – Present</span>
+              </div>
+              <div class="cv-company">United College of Aviation Science & Management (UCASM) — Uttara, Dhaka</div>
+              <ul class="small mb-0 ps-3">
+                <li>Deliver university-level lectures and practical lab sessions in programming, algorithms, web engineering, and cybersecurity.</li>
+                <li>Supervise academic examinations, capstone projects, and departmental student workshops.</li>
+              </ul>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="cv-job-title">Asset Project Coordinator</span>
+                <span class="small fw-bold">15 July 2025 – Present</span>
+              </div>
+              <div class="cv-company">United College of Aviation Science & Technology (UCAST) — Uttara, Dhaka</div>
+              <ul class="small mb-0 ps-3">
+                <li>Coordinate asset-project activities across 10+ academic subjects, audit laboratories, and oversee workflows.</li>
+              </ul>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="cv-job-title">Manager – IT</span>
+                <span class="small fw-bold">5 Feb 2024 – 15 July 2025</span>
+              </div>
+              <div class="cv-company">Turnago Group — Gulshan-1, Dhaka</div>
+              <ul class="small mb-0 ps-3">
+                <li>Managed corporate software systems, certificate verification portal, and trained 18+ staff members.</li>
+              </ul>
+            </div>
+
+            <div class="mb-3">
+              <div class="d-flex justify-content-between align-items-center">
+                <span class="cv-job-title">Manager – Project</span>
+                <span class="small fw-bold">1 Oct 2022 – 3 Feb 2024</span>
+              </div>
+              <div class="cv-company">Uttara Computer Training & IT Firm (UCTIT) — Uttara, Dhaka</div>
+              <ul class="small mb-0 ps-3">
+                <li>Supervised software product pipelines and coached 20+ emerging software developers.</li>
+              </ul>
+            </div>
+
+            <!-- NSDA Certifications -->
+            <div class="cv-section-heading">NSDA Bangladesh Certifications (PM Office)</div>
+            <table class="cv-table">
+              <thead>
+                <tr>
+                  <th>Standard / Occupation</th>
+                  <th>Level</th>
+                  <th>Accreditation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>CBT&A (Competency-Based Training & Assessment)</td><td>Level 4 Assessor</td><td>NSDA Bangladesh</td></tr>
+                <tr><td>Web Application Development with Python</td><td>Level 4</td><td>NSDA Bangladesh</td></tr>
+                <tr><td>Search Engine Optimization (SEO)</td><td>Level 4</td><td>NSDA Bangladesh</td></tr>
+                <tr><td>IT Support Service</td><td>Level 3</td><td>NSDA Bangladesh</td></tr>
+                <tr><td>Web Design and Development for Freelancing</td><td>Level 3</td><td>NSDA Bangladesh</td></tr>
+                <tr><td>Digital Marketing for Freelancing</td><td>Level 3</td><td>NSDA Bangladesh</td></tr>
+                <tr><td>Computer Operation</td><td>Level 2</td><td>NSDA Bangladesh</td></tr>
+              </tbody>
+            </table>
+
+            <!-- Technical Skills Summary -->
+            <div class="cv-section-heading">Core Skills Summary</div>
+            <p class="small mb-0">
+              <strong>Backend & Web:</strong> Laravel (PHP), Django (Python), Modern PHP 8.x, MySQL, REST APIs, HTML5, CSS3, Bootstrap.<br>
+              <strong>Languages:</strong> Python, C/C++, Java, C#, Flutter (Dart), JavaScript.<br>
+              <strong>Marketing & Systems:</strong> Meta CAPI, Google Tag Manager, Technical SEO, Linux Server Administration, Agile Scrum, Software QA.
+            </p>
+
+            <!-- Formal Declaration -->
+            <div class="cv-section-heading">Declaration</div>
+            <p class="small text-muted mb-4">
+              I, the undersigned, hereby corroborate that, to the best of my knowledge and belief, the above-furnished information is true and correct in every detail.
+            </p>
+
+            <div class="d-flex justify-content-between align-items-end pt-3">
+              <div>
+                <div class="fw-bold" style="color:#0f172a;">KHONDOKER SAKIBUL HABIB SAKIB</div>
+                <div class="small text-muted">Dhaka, Bangladesh</div>
+              </div>
+              <div class="text-end">
+                <div class="border-top border-dark pt-1 px-4 small fw-bold" style="display:inline-block;">
+                  Signature of Applicant
+                </div>
+              </div>
+            </div>
+
+          </div><!-- /cv-paper -->
+        </div>
+
+        <div class="modal-footer modal-header-custom">
+          <button type="button" class="btn btn-cyan" onclick="window.print();">
+            <i class="bi bi-printer-fill me-1"></i> Print / Save as PDF
+          </button>
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close Window</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" title="Back to top" aria-label="Back to top">
+    <i class="bi bi-arrow-up-short"></i>
+  </button>
+
+  <!-- Three.js (r128) via CDN for 3D Background -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Bootstrap 5.3.3 Bundle with Popper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Main JavaScript File -->
+  <script src="./js/main.js"></script>
+
+</body>
+</html>

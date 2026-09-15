@@ -245,7 +245,7 @@ export const PrintResumeModal: React.FC<PrintResumeModalProps> = ({ isOpen, onCl
                   <div className="shrink-0 flex flex-col items-center sm:items-start">
                     <div className="relative w-28 h-36 sm:w-32 sm:h-40 rounded-lg overflow-hidden border-2 border-slate-800 dark:border-slate-600 shadow-md bg-slate-100 dark:bg-slate-800">
                       <img
-                        src="/my-passport-photo.png"
+                        src="./my-passport-photo.png"
                         alt="Khondoker Sakibul Habib Sakib - Passport Photo"
                         className="w-full h-full object-cover object-top"
                         onError={(e) => {
