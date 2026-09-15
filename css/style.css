@@ -1491,6 +1491,44 @@ body.light-theme .anim-preset-btn.active {
   color: inherit;
 }
 
+/* Distinct styling for My Uploads */
+.gallery-filter-btn-custom {
+  background: rgba(6, 182, 212, 0.08);
+  border-color: rgba(6, 182, 212, 0.45);
+  color: #38bdf8;
+}
+
+.gallery-filter-btn-custom .badge {
+  background: rgba(6, 182, 212, 0.25);
+  color: #e0f2fe;
+}
+
+.gallery-filter-btn-custom:hover,
+.gallery-filter-btn-custom.active {
+  background: var(--accent-cyan) !important;
+  color: #030712 !important;
+  border-color: var(--accent-cyan) !important;
+  box-shadow: 0 4px 16px var(--accent-cyan-glow);
+}
+
+body.light-theme .gallery-filter-btn-custom {
+  background: rgba(2, 132, 199, 0.08);
+  border-color: rgba(2, 132, 199, 0.45);
+  color: #0284c7;
+}
+
+body.light-theme .gallery-filter-btn-custom .badge {
+  background: rgba(2, 132, 199, 0.18);
+  color: #0369a1;
+}
+
+body.light-theme .gallery-filter-btn-custom:hover,
+body.light-theme .gallery-filter-btn-custom.active {
+  background: #0284c7 !important;
+  color: #ffffff !important;
+  border-color: #0284c7 !important;
+}
+
 .gallery-card {
   position: relative;
   background: var(--bg-card);

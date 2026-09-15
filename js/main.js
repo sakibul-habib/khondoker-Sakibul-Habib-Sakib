@@ -735,7 +735,7 @@ function initGallery() {
     console.warn('Could not parse saved likes', e);
   }
 
-  // Combine memories
+  // Combine memories helper (legacy reference)
   function getAllMemories() {
     return [...customMemories, ...CURATED_MEMORIES];
   }
@@ -784,33 +784,61 @@ function initGallery() {
 
   if (!container) return;
 
-  // Counts update
+  // Counts update: All Memories shows curated count; My Uploads shows custom count
   function updateCounts() {
-    const all = getAllMemories();
     const countAll = document.getElementById('count-all');
     const countMilestone = document.getElementById('count-milestone');
     const countAcademic = document.getElementById('count-academic');
     const countCareer = document.getElementById('count-career');
     const countCustom = document.getElementById('count-custom');
 
-    if (countAll) countAll.textContent = all.length;
-    if (countMilestone) countMilestone.textContent = all.filter(m => m.category === 'milestone').length;
-    if (countAcademic) countAcademic.textContent = all.filter(m => m.category === 'academic').length;
-    if (countCareer) countCareer.textContent = all.filter(m => m.category === 'career').length;
-    if (countCustom) countCustom.textContent = all.filter(m => m.category === 'custom').length;
+    if (countAll) countAll.textContent = CURATED_MEMORIES.length;
+    if (countMilestone) countMilestone.textContent = CURATED_MEMORIES.filter(m => m.category === 'milestone').length;
+    if (countAcademic) countAcademic.textContent = CURATED_MEMORIES.filter(m => m.category === 'academic').length;
+    if (countCareer) countCareer.textContent = CURATED_MEMORIES.filter(m => m.category === 'career').length;
+    if (countCustom) countCustom.textContent = customMemories.length;
   }
 
   // Render Memories
   function render() {
     updateCounts();
-    const all = getAllMemories();
 
-    displayedMemories = all.filter(item => {
-      // Category filter
-      if (currentFilter !== 'all' && item.category !== currentFilter) {
-        return false;
-      }
-      // Search filter
+    // Dedicated empty state for "My Uploads" if no personal uploads exist yet
+    if (currentFilter === 'custom' && customMemories.length === 0) {
+      if (emptyState) emptyState.classList.add('d-none');
+      displayedMemories = [];
+      container.innerHTML = `
+        <div class="col-12 text-center py-5">
+          <div class="custom-card p-4 p-md-5 mx-auto text-center" style="max-width: 520px; border-radius: 16px;">
+            <div class="display-5 text-info mb-3"><i class="bi bi-folder-plus"></i></div>
+            <h4 class="fw-bold mb-2 text-main">Your Uploaded Photos</h4>
+            <p class="text-muted small mb-4" style="line-height: 1.6;">
+              Only your photos will appear when clicking <strong>My Uploads</strong>. Your uploaded memories are stored separately and do not clutter the curated portfolio memories.
+            </p>
+            <button type="button" class="btn btn-cyan btn-sm px-4 py-2 rounded-pill shadow-sm" data-bs-toggle="modal" data-bs-target="#addMemoryModal">
+              <i class="bi bi-cloud-arrow-up-fill me-1"></i> Upload Your First Photo
+            </button>
+          </div>
+        </div>
+      `;
+      return;
+    }
+
+    // Select source list based on filter
+    let sourceList = [];
+    if (currentFilter === 'custom') {
+      // ONLY show user uploaded photos
+      sourceList = customMemories;
+    } else if (currentFilter === 'all') {
+      // ONLY show curated portfolio memories (user uploads are NOT mixed in)
+      sourceList = CURATED_MEMORIES;
+    } else {
+      // Specific curated category (milestone, academic, career)
+      sourceList = CURATED_MEMORIES.filter(item => item.category === currentFilter);
+    }
+
+    // Apply search filter
+    displayedMemories = sourceList.filter(item => {
       if (currentSearch.trim() !== '') {
         const q = currentSearch.toLowerCase();
         const matchTitle = (item.title || '').toLowerCase().includes(q);
@@ -836,7 +864,7 @@ function initGallery() {
     displayedMemories.forEach((item, index) => {
       const isLiked = !!userLikes[item.id];
       const likeCount = (item.likes || 0) + (isLiked ? 1 : 0);
-      const isCustom = item.id.startsWith('custom-');
+      const isCustom = item.id.startsWith('custom-') || item.isCustom === true;
 
       if (currentViewMode === 'polaroid') {
         // Random slight tilt (-3deg to +3deg)
@@ -871,7 +899,7 @@ function initGallery() {
                     <i class="bi ${isLiked ? 'bi-heart-fill' : 'bi-heart'}"></i>
                   </button>
                   ${isCustom ? `
-                    <button type="button" class="gallery-icon-btn" data-delete-id="${item.id}" title="Delete Memory">
+                    <button type="button" class="gallery-icon-btn text-danger" data-delete-id="${item.id}" title="Delete this upload">
                       <i class="bi bi-trash"></i>
                     </button>
                   ` : ''}
@@ -887,8 +915,8 @@ function initGallery() {
               <div class="gallery-card-body">
                 <div>
                   <div class="d-flex align-items-center justify-content-between mb-1">
-                    <span class="badge project-category-badge text-uppercase" style="font-size: 0.68rem;">
-                      ${item.category}
+                    <span class="badge ${isCustom ? 'bg-info bg-opacity-25 text-info border border-info border-opacity-50' : 'project-category-badge'} text-uppercase" style="font-size: 0.68rem;">
+                      ${isCustom ? '<i class="bi bi-person-check-fill me-1"></i>My Upload' : item.category}
                     </span>
                     <span class="text-muted small" style="font-size: 0.75rem;">
                       <i class="bi bi-heart-fill text-danger me-1"></i>${likeCount} likes
@@ -1194,7 +1222,8 @@ function initGallery() {
         description,
         tags,
         likes: 1,
-        featured: false
+        featured: false,
+        isCustom: true
       };
 
       customMemories.unshift(newMemory);
@@ -1220,8 +1249,26 @@ function initGallery() {
         if (modal) modal.hide();
       }
 
-      // Render updated list
+      // Automatically switch to "My Uploads" so the user immediately sees their photo
+      currentFilter = 'custom';
+      currentSearch = '';
+      if (searchInput) searchInput.value = '';
+      filterButtons.forEach(b => {
+        if (b.getAttribute('data-memory-filter') === 'custom') {
+          b.classList.add('active');
+        } else {
+          b.classList.remove('active');
+        }
+      });
+
+      // Render updated list in My Uploads view
       render();
+
+      // Smooth scroll to gallery container
+      const gallerySec = document.getElementById('gallery');
+      if (gallerySec) {
+        gallerySec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
     });
   }
 

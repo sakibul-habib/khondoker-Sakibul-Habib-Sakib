@@ -762,7 +762,7 @@
           <!-- Top Toolbar: Filters, Search, View Switch, and Upload Trigger -->
           <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-4 p-3 rounded-4 custom-card">
             <!-- Filter Pills -->
-            <div class="d-flex flex-wrap gap-2" id="gallery-filter-buttons">
+            <div class="d-flex flex-wrap align-items-center gap-2" id="gallery-filter-buttons">
               <button class="gallery-filter-btn active" data-memory-filter="all">
                 <i class="bi bi-collection-fill"></i> All Memories <span class="badge" id="count-all">0</span>
               </button>
@@ -775,8 +775,9 @@
               <button class="gallery-filter-btn" data-memory-filter="career">
                 <i class="bi bi-briefcase-fill"></i> Career & IT <span class="badge" id="count-career">0</span>
               </button>
-              <button class="gallery-filter-btn" data-memory-filter="custom">
-                <i class="bi bi-folder-heart-fill"></i> My Uploads <span class="badge" id="count-custom">0</span>
+              <div class="vr d-none d-sm-block opacity-25 mx-1" style="height: 24px;"></div>
+              <button class="gallery-filter-btn gallery-filter-btn-custom" data-memory-filter="custom" title="Show only your uploaded photos">
+                <i class="bi bi-person-badge-fill"></i> <span>My Uploads</span> <span class="badge" id="count-custom">0</span>
               </button>
             </div>
 
