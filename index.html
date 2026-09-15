@@ -59,6 +59,11 @@
           </ul>
 
           <div class="d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0">
+            <!-- 3D Animation Tuning Button -->
+            <button class="btn btn-outline-custom p-2 rounded-circle" id="nav-anim-btn" data-bs-toggle="modal" data-bs-target="#animModal" title="Adjust 3D Animation Settings" aria-label="Adjust 3D Animation">
+              <i class="bi bi-sliders2"></i>
+            </button>
+
             <!-- Theme Toggle Button -->
             <button class="btn btn-outline-custom p-2 rounded-circle" id="theme-toggle-btn" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
               <i class="bi bi-sun-fill" id="theme-icon"></i>
@@ -79,7 +84,7 @@
         <div class="row align-items-center">
           <div class="col-lg-8">
             <div class="hero-role-pill mb-3">
-              <span class="badge bg-cyan text-dark fw-bold me-1" style="background:#06b6d4;">VERIFIED</span>
+              <span class="badge badge-verified me-1">VERIFIED</span>
               Head of IT • University Lecturer • NSDA Level 4 Assessor
             </div>
             
@@ -89,7 +94,7 @@
             </h1>
 
             <p class="hero-bio mb-4">
-              Accomplished IT Executive, Computer Science Lecturer, and Competency-Based Training (CBT&A) Assessor. Directing enterprise software engineering, institutional asset workflows, and collegiate computer science laboratories across the Plannet Group ecosystem.
+              Accomplished IT Executive, Computer Science Lecturer, and National Level 4 CBT&A Assessor (evaluating written assessments, hands-on practical demonstrations, and oral viva questioning). Directing enterprise software engineering, institutional asset workflows, and collegiate computer science laboratories across the Plannet Group ecosystem.
             </p>
 
             <div class="d-flex flex-wrap gap-3 mb-5">
@@ -130,7 +135,7 @@
               <div class="col-6 col-md-3">
                 <div class="metric-box">
                   <div class="metric-number">Level 4</div>
-                  <div class="metric-label">NSDA Assessor</div>
+                  <div class="metric-label">CBT&A Assessor</div>
                 </div>
               </div>
             </div>
@@ -147,7 +152,7 @@
                 <div>
                   <h5 class="mb-1 fw-bold">Sakib Habib</h5>
                   <p class="text-info small mb-1">Head of IT & Faculty</p>
-                  <span class="badge bg-success bg-opacity-25 text-success border border-success border-opacity-25" style="font-size: 0.7rem;">
+                  <span class="badge badge-status-completed" style="font-size: 0.725rem;">
                     <i class="bi bi-check-circle-fill me-1"></i> Active Leadership
                   </span>
                 </div>
@@ -180,7 +185,7 @@
     </section>
 
     <!-- About & Leadership Section -->
-    <section class="section-padding" id="about" style="background: rgba(0,0,0,0.15);">
+    <section class="section-padding section-alt" id="about">
       <div class="container">
         <div class="text-center">
           <div class="section-badge"><i class="bi bi-person-badge"></i> Executive Profile</div>
@@ -201,21 +206,21 @@
                 <li class="mb-3 d-flex gap-2">
                   <i class="bi bi-geo-alt-fill text-info mt-1"></i>
                   <div>
-                    <strong class="text-white">United College of Aviation Science & Management (UCASM)</strong><br>
+                    <strong class="text-main">United College of Aviation Science & Management (UCASM)</strong><br>
                     House #16, Road #04, Sector #03, Uttara, Dhaka, Bangladesh.
                   </div>
                 </li>
                 <li class="mb-3 d-flex gap-2">
                   <i class="bi bi-geo-alt-fill text-info mt-1"></i>
                   <div>
-                    <strong class="text-white">United College of Aviation Science & Technology (UCAST)</strong><br>
+                    <strong class="text-main">United College of Aviation Science & Technology (UCAST)</strong><br>
                     House #16, Road #04, Sector #03, Uttara, Dhaka, Bangladesh.
                   </div>
                 </li>
                 <li class="d-flex gap-2">
                   <i class="bi bi-geo-alt-fill text-info mt-1"></i>
                   <div>
-                    <strong class="text-white">City Tech IT (Plannet Group)</strong><br>
+                    <strong class="text-main">City Tech IT (Plannet Group)</strong><br>
                     H.M. Plaza, Lift-14, Suite-1/A, Plot-34, Road-2, Sector-3, Uttara Rajlokkhi, Dhaka-1230.
                   </div>
                 </li>
@@ -246,9 +251,9 @@
               <div class="col-md-6">
                 <div class="custom-card p-4">
                   <div class="text-info fs-2 mb-2"><i class="bi bi-patch-check-fill"></i></div>
-                  <h5 class="fw-bold mb-2">NSDA Level 4 Assessor</h5>
+                  <h5 class="fw-bold mb-2">NSDA Level 4 Assessor (CBT&A)</h5>
                   <p class="text-muted small mb-0">
-                    Accredited Assessor by National Skills Development Authority (Prime Minister’s Office, Bangladesh) in Competency-Based Training & Assessment (CBT&A), Python, and SEO.
+                    Accredited Assessor by National Skills Development Authority (Prime Minister’s Office, Bangladesh) in Competency-Based Training & Assessment (CBT&A Methodology) conducting practical demonstrations, oral viva sessions, and evidence assessments beyond standard written exams, alongside Python Web and SEO standards.
                   </p>
                 </div>
               </div>
@@ -441,7 +446,7 @@
     </section>
 
     <!-- Featured Projects & Thesis Section -->
-    <section class="section-padding" id="projects" style="background: rgba(0,0,0,0.15);">
+    <section class="section-padding section-alt" id="projects">
       <div class="container">
         <div class="text-center">
           <div class="section-badge"><i class="bi bi-code-square"></i> Solutions Architecture</div>
@@ -461,9 +466,9 @@
         <!-- Featured Thesis Spotlight -->
         <div class="row justify-content-center mb-5">
           <div class="col-lg-12">
-            <div class="custom-card p-4 p-md-5 border-info border-opacity-50" style="background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(6,182,212,0.1));">
+            <div class="custom-card p-4 p-md-5 featured-project-card">
               <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
-                <span class="badge bg-cyan text-dark fw-bold px-3 py-2">FEATURED B.SC THESIS PROJECT</span>
+                <span class="badge badge-thesis-featured px-3 py-2">FEATURED B.SC THESIS PROJECT</span>
                 <span class="text-info small fw-bold">Computer Vision • Embedded Systems • Assistive Robotics</span>
               </div>
 
@@ -480,7 +485,7 @@
                       <div class="d-flex gap-2">
                         <i class="bi bi-radar text-info fs-4"></i>
                         <div>
-                          <strong class="d-block text-white">Ultrasonic Proximity Array</strong>
+                          <strong class="d-block featured-feature-title">Ultrasonic Proximity Array</strong>
                           <small class="text-muted">Twin sensors scanning obstacles from 2cm to 400cm in real-time.</small>
                         </div>
                       </div>
@@ -489,7 +494,7 @@
                       <div class="d-flex gap-2">
                         <i class="bi bi-volume-up text-info fs-4"></i>
                         <div>
-                          <strong class="d-block text-white">Haptic & Audio Guidance</strong>
+                          <strong class="d-block featured-feature-title">Haptic & Audio Guidance</strong>
                           <small class="text-muted">Bone-conduction cues & frequency-modulated proximity vibrations.</small>
                         </div>
                       </div>
@@ -537,7 +542,7 @@
           <div class="col-md-6 col-lg-4 project-item" data-category="erp">
             <div class="custom-card p-4 d-flex flex-column h-100">
               <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge bg-secondary bg-opacity-25 text-info">Enterprise ERP & POS</span>
+                <span class="badge project-category-badge">Enterprise ERP & POS</span>
                 <small class="text-muted">City Tech IT</small>
               </div>
               <h5 class="fw-bold mb-2">POS & Inventory Management Suite</h5>
@@ -561,7 +566,7 @@
           <div class="col-md-6 col-lg-4 project-item" data-category="erp">
             <div class="custom-card p-4 d-flex flex-column h-100">
               <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge bg-secondary bg-opacity-25 text-info">Enterprise ERP & POS</span>
+                <span class="badge project-category-badge">Enterprise ERP & POS</span>
                 <small class="text-muted">Plannet Group</small>
               </div>
               <h5 class="fw-bold mb-2">Enterprise HR Management System</h5>
@@ -585,7 +590,7 @@
           <div class="col-md-6 col-lg-4 project-item" data-category="academic">
             <div class="custom-card p-4 d-flex flex-column h-100">
               <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge bg-secondary bg-opacity-25 text-info">Academic & Utility</span>
+                <span class="badge project-category-badge">Academic & Utility</span>
                 <small class="text-muted">UCASM</small>
               </div>
               <h5 class="fw-bold mb-2">Student Attendance System</h5>
@@ -609,7 +614,7 @@
           <div class="col-md-6 col-lg-4 project-item" data-category="api">
             <div class="custom-card p-4 d-flex flex-column h-100">
               <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge bg-secondary bg-opacity-25 text-info">APIs & Marketing</span>
+                <span class="badge project-category-badge">APIs & Marketing</span>
                 <small class="text-muted">Plannet Group</small>
               </div>
               <h5 class="fw-bold mb-2">Meta Pixel & Conversions API (CAPI)</h5>
@@ -633,7 +638,7 @@
           <div class="col-md-6 col-lg-4 project-item" data-category="web">
             <div class="custom-card p-4 d-flex flex-column h-100">
               <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge bg-secondary bg-opacity-25 text-info">Web Applications</span>
+                <span class="badge project-category-badge">Web Applications</span>
                 <small class="text-muted">Turnago Group</small>
               </div>
               <h5 class="fw-bold mb-2">Certificate Verification Portal</h5>
@@ -657,7 +662,7 @@
           <div class="col-md-6 col-lg-4 project-item" data-category="erp">
             <div class="custom-card p-4 d-flex flex-column h-100">
               <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge bg-secondary bg-opacity-25 text-info">Enterprise ERP & POS</span>
+                <span class="badge project-category-badge">Enterprise ERP & POS</span>
                 <small class="text-muted">UCTIT</small>
               </div>
               <h5 class="fw-bold mb-2">Loan & Microfinance System</h5>
@@ -681,7 +686,7 @@
           <div class="col-md-6 col-lg-4 project-item" data-category="web">
             <div class="custom-card p-4 d-flex flex-column h-100">
               <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge bg-secondary bg-opacity-25 text-info">Web Applications</span>
+                <span class="badge project-category-badge">Web Applications</span>
                 <small class="text-muted">Multi-Brand</small>
               </div>
               <h5 class="fw-bold mb-2">Custom E-Commerce Platform</h5>
@@ -705,7 +710,7 @@
           <div class="col-md-6 col-lg-4 project-item" data-category="academic">
             <div class="custom-card p-4 d-flex flex-column h-100">
               <div class="d-flex justify-content-between align-items-center mb-2">
-                <span class="badge bg-secondary bg-opacity-25 text-info">Academic & Utility</span>
+                <span class="badge project-category-badge">Academic & Utility</span>
                 <small class="text-muted">University Port</small>
               </div>
               <h5 class="fw-bold mb-2">University CGPA Calculator</h5>
@@ -855,7 +860,7 @@
     </section>
 
     <!-- NSDA Certifications Section -->
-    <section class="section-padding" id="certifications" style="background: rgba(0,0,0,0.15);">
+    <section class="section-padding section-alt" id="certifications">
       <div class="container">
         <div class="text-center">
           <div class="section-badge"><i class="bi bi-award"></i> Accreditation</div>
@@ -876,12 +881,12 @@
               </div>
 
               <div class="table-responsive">
-                <table class="table table-dark table-hover table-striped align-middle mb-0" style="background: transparent;">
+                <table class="table table-dark table-hover table-striped align-middle mb-0">
                   <thead>
                     <tr class="text-info border-secondary">
                       <th scope="col" style="width: 60px;">SL</th>
                       <th scope="col">Occupation / Standard Title</th>
-                      <th scope="col" style="width: 130px;">Level</th>
+                      <th scope="col" style="width: 140px;">Level</th>
                       <th scope="col">Accreditation Body</th>
                     </tr>
                   </thead>
@@ -889,43 +894,48 @@
                     <tr>
                       <td>1</td>
                       <td><strong>Computer Operation</strong></td>
-                      <td><span class="badge bg-secondary">Level 2</span></td>
+                      <td><span class="badge badge-level-2">Level 2</span></td>
                       <td class="small text-muted">NSDA Bangladesh</td>
                     </tr>
                     <tr>
                       <td>2</td>
                       <td><strong>Digital Marketing for Freelancing</strong></td>
-                      <td><span class="badge bg-primary">Level 3</span></td>
+                      <td><span class="badge badge-level-3">Level 3</span></td>
                       <td class="small text-muted">NSDA Bangladesh</td>
                     </tr>
                     <tr>
                       <td>3</td>
                       <td><strong>Web Design and Development for Freelancing</strong></td>
-                      <td><span class="badge bg-primary">Level 3</span></td>
+                      <td><span class="badge badge-level-3">Level 3</span></td>
                       <td class="small text-muted">NSDA Bangladesh</td>
                     </tr>
                     <tr>
                       <td>4</td>
                       <td><strong>IT Support Service</strong></td>
-                      <td><span class="badge bg-primary">Level 3</span></td>
+                      <td><span class="badge badge-level-3">Level 3</span></td>
                       <td class="small text-muted">NSDA Bangladesh</td>
                     </tr>
-                    <tr>
-                      <td>5</td>
-                      <td><strong>CBT&A (Competency-Based Training & Assessment)</strong></td>
-                      <td><span class="badge bg-cyan text-dark fw-bold">Level 4</span></td>
-                      <td class="small text-muted">NSDA Bangladesh</td>
+                    <tr class="table-highlight-row">
+                      <td><strong class="text-info">5</strong></td>
+                      <td>
+                        <strong class="text-info">CBT&A Methodology (Competency-Based Training & Assessment)</strong>
+                        <div class="small text-muted mt-1">
+                          <i class="bi bi-check-circle-fill text-info me-1"></i>Accredited Assessor Scope: <strong>Written Theory</strong>, <strong>Hands-on Practical Demonstration</strong>, and <strong>Oral Viva & Portfolio Assessment</strong>.
+                        </div>
+                      </td>
+                      <td><span class="badge badge-level-4">Level 4 Assessor</span></td>
+                      <td class="small text-muted">NSDA Bangladesh (Prime Minister's Office)</td>
                     </tr>
                     <tr>
                       <td>6</td>
                       <td><strong>Web Application Development with Python</strong></td>
-                      <td><span class="badge bg-cyan text-dark fw-bold">Level 4</span></td>
+                      <td><span class="badge badge-level-4">Level 4</span></td>
                       <td class="small text-muted">NSDA Bangladesh</td>
                     </tr>
                     <tr>
                       <td>7</td>
                       <td><strong>Search Engine Optimization (SEO)</strong></td>
-                      <td><span class="badge bg-cyan text-dark fw-bold">Level 4</span></td>
+                      <td><span class="badge badge-level-4">Level 4</span></td>
                       <td class="small text-muted">NSDA Bangladesh</td>
                     </tr>
                   </tbody>
@@ -1025,7 +1035,7 @@
               <div class="custom-card p-4 mb-3">
                 <div class="d-flex justify-content-between align-items-start mb-1">
                   <h5 class="fw-bold mb-0">Professional Master of Science in Computer Science (PMSCS)</h5>
-                  <span class="badge bg-warning bg-opacity-25 text-warning">Ongoing</span>
+                  <span class="badge badge-status-ongoing">Ongoing</span>
                 </div>
                 <div class="text-info fw-semibold mb-2">Jahangirnagar University (JU), Bangladesh</div>
                 <ul class="text-muted small mb-0 ps-3">
@@ -1043,7 +1053,7 @@
               <div class="custom-card p-4 mb-3">
                 <div class="d-flex justify-content-between align-items-start mb-1">
                   <h5 class="fw-bold mb-0">Bachelor of Science in Computer Science & Engineering (B.Sc CSE)</h5>
-                  <span class="badge bg-success bg-opacity-25 text-success">Completed</span>
+                  <span class="badge badge-status-completed">Completed</span>
                 </div>
                 <div class="text-info fw-semibold mb-2">International University of Business Agriculture & Technology (IUBAT)</div>
                 <ul class="text-muted small mb-0 ps-3">
@@ -1061,7 +1071,7 @@
               <div class="custom-card p-4 mb-3">
                 <div class="d-flex justify-content-between align-items-start mb-1">
                   <h5 class="fw-bold mb-0">Higher Secondary School Certificate (HSC)</h5>
-                  <span class="badge bg-secondary bg-opacity-25 text-muted">Completed</span>
+                  <span class="badge badge-status-completed">Completed</span>
                 </div>
                 <div class="text-info fw-semibold mb-2">Sadullapur Government College (SGC) • Dinajpur Board</div>
                 <p class="text-muted small mb-0">Science Discipline: Mathematics, Physics, Chemistry, and Information & Communication Technology (ICT).</p>
@@ -1075,7 +1085,7 @@
               <div class="custom-card p-4 mb-3">
                 <div class="d-flex justify-content-between align-items-start mb-1">
                   <h5 class="fw-bold mb-0">Secondary School Certificate (SSC)</h5>
-                  <span class="badge bg-secondary bg-opacity-25 text-muted">Completed</span>
+                  <span class="badge badge-status-completed">Completed</span>
                 </div>
                 <div class="text-info fw-semibold mb-2">Sadullapur ML Pilot High School • Dinajpur Board</div>
                 <p class="text-muted small mb-0">Science discipline with academic distinction in Mathematics and Science.</p>
@@ -1088,7 +1098,7 @@
     </section>
 
     <!-- Contact & Direct Inquiries Section -->
-    <section class="section-padding" id="contact" style="background: rgba(0,0,0,0.15);">
+    <section class="section-padding section-alt" id="contact">
       <div class="container">
         <div class="text-center">
           <div class="section-badge"><i class="bi bi-chat-dots"></i> Direct Communication</div>
@@ -1105,7 +1115,7 @@
                 <div class="p-3 bg-info bg-opacity-10 rounded text-info fs-5"><i class="bi bi-telephone-fill"></i></div>
                 <div>
                   <small class="text-muted d-block">Phone / WhatsApp</small>
-                  <a href="tel:+8801789557517" class="text-white text-decoration-none fw-semibold">+880 1789-557517</a>
+                  <a href="tel:+8801789557517" class="text-decoration-none fw-semibold" style="color: var(--text-main);">+880 1789-557517</a>
                 </div>
               </div>
 
@@ -1113,7 +1123,7 @@
                 <div class="p-3 bg-info bg-opacity-10 rounded text-info fs-5"><i class="bi bi-envelope-fill"></i></div>
                 <div>
                   <small class="text-muted d-block">Primary Email</small>
-                  <a href="mailto:sakibulhabib@gmail.com" class="text-white text-decoration-none fw-semibold">sakibulhabib@gmail.com</a>
+                  <a href="mailto:sakibulhabib@gmail.com" class="text-decoration-none fw-semibold" style="color: var(--text-main);">sakibulhabib@gmail.com</a>
                 </div>
               </div>
 
@@ -1121,7 +1131,7 @@
                 <div class="p-3 bg-info bg-opacity-10 rounded text-info fs-5"><i class="bi bi-envelope-paper-fill"></i></div>
                 <div>
                   <small class="text-muted d-block">Corporate Email</small>
-                  <a href="mailto:ctit.sakib@gmail.com" class="text-white text-decoration-none fw-semibold">ctit.sakib@gmail.com</a>
+                  <a href="mailto:ctit.sakib@gmail.com" class="text-decoration-none fw-semibold" style="color: var(--text-main);">ctit.sakib@gmail.com</a>
                 </div>
               </div>
 
@@ -1129,7 +1139,7 @@
                 <div class="p-3 bg-info bg-opacity-10 rounded text-info fs-5"><i class="bi bi-geo-alt-fill"></i></div>
                 <div>
                   <small class="text-muted d-block">Residence / Location</small>
-                  <span class="text-white fw-semibold small">House-11, Road-6, Badda link Road, Gulshan-1, Dhaka-1212</span>
+                  <span class="fw-semibold small" style="color: var(--text-main);">House-11, Road-6, Badda link Road, Gulshan-1, Dhaka-1212</span>
                 </div>
               </div>
 
@@ -1160,22 +1170,22 @@
                 <div class="row g-3 mb-3">
                   <div class="col-sm-6">
                     <label for="contact-name" class="form-label small text-muted">Your Full Name *</label>
-                    <input type="text" class="form-control bg-dark text-white border-secondary" id="contact-name" placeholder="e.g. John Doe" required>
+                    <input type="text" class="form-control form-control-custom w-100" id="contact-name" placeholder="e.g. John Doe" required>
                   </div>
                   <div class="col-sm-6">
                     <label for="contact-email" class="form-label small text-muted">Email Address *</label>
-                    <input type="email" class="form-control bg-dark text-white border-secondary" id="contact-email" placeholder="name@organization.com" required>
+                    <input type="email" class="form-control form-control-custom w-100" id="contact-email" placeholder="name@organization.com" required>
                   </div>
                 </div>
 
                 <div class="mb-3">
                   <label for="contact-subject" class="form-label small text-muted">Subject</label>
-                  <input type="text" class="form-control bg-dark text-white border-secondary" id="contact-subject" placeholder="Project Inquiry / Academic Session">
+                  <input type="text" class="form-control form-control-custom w-100" id="contact-subject" placeholder="Project Inquiry / Academic Session">
                 </div>
 
                 <div class="mb-3">
                   <label for="contact-message" class="form-label small text-muted">Message Details *</label>
-                  <textarea class="form-control bg-dark text-white border-secondary" id="contact-message" rows="4" placeholder="Briefly describe your objectives or inquiry..." required></textarea>
+                  <textarea class="form-control form-control-custom w-100" id="contact-message" rows="4" placeholder="Briefly describe your objectives or inquiry..." required></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-cyan w-100 py-2">
@@ -1379,7 +1389,14 @@
                 </tr>
               </thead>
               <tbody>
-                <tr><td>CBT&A (Competency-Based Training & Assessment)</td><td>Level 4 Assessor</td><td>NSDA Bangladesh</td></tr>
+                <tr style="background: rgba(2, 132, 199, 0.06);">
+                  <td>
+                    <strong>CBT&A Methodology (Competency-Based Training & Assessment)</strong><br>
+                    <span style="font-size: 0.8rem; color: #0284c7; font-weight: 600;">Accredited Assessor Scope: Written, Practical Demonstration & Oral Viva Assessments</span>
+                  </td>
+                  <td><span class="badge-level-4-cv">Level 4 Assessor</span></td>
+                  <td>NSDA Bangladesh (PM Office)</td>
+                </tr>
                 <tr><td>Web Application Development with Python</td><td>Level 4</td><td>NSDA Bangladesh</td></tr>
                 <tr><td>Search Engine Optimization (SEO)</td><td>Level 4</td><td>NSDA Bangladesh</td></tr>
                 <tr><td>IT Support Service</td><td>Level 3</td><td>NSDA Bangladesh</td></tr>
@@ -1427,6 +1444,172 @@
       </div>
     </div>
   </div>
+
+  <!-- =========================================================================
+       3D Animation Studio & Adjuster Modal
+       ========================================================================= -->
+  <div class="modal fade" id="animModal" tabindex="-1" aria-labelledby="animModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content modal-content-custom">
+        <div class="modal-header modal-header-custom d-flex justify-content-between align-items-center">
+          <div>
+            <h5 class="modal-title fw-bold" id="animModalLabel">
+              <i class="bi bi-sliders2-vertical text-info me-2"></i> 3D Background Animation Studio
+            </h5>
+            <small class="text-muted">Fine-tune WebGL wave physics, particle velocity, and interactive dynamics in real-time</small>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body modal-body-custom">
+          <!-- Curated Presets Bar -->
+          <div class="mb-4">
+            <label class="form-label small text-muted text-uppercase fw-bold mb-2">Curated Experience Presets</label>
+            <div class="d-flex flex-wrap gap-2">
+              <button type="button" class="anim-preset-btn" data-anim-preset="calm">
+                <i class="bi bi-water"></i> Calm Ocean
+              </button>
+              <button type="button" class="anim-preset-btn active" data-anim-preset="default">
+                <i class="bi bi-speedometer2"></i> Balanced Executive
+              </button>
+              <button type="button" class="anim-preset-btn" data-anim-preset="dynamic">
+                <i class="bi bi-activity"></i> High Dynamic
+              </button>
+              <button type="button" class="anim-preset-btn" data-anim-preset="cyber">
+                <i class="bi bi-lightning-charge-fill"></i> Cyber Pulse
+              </button>
+            </div>
+          </div>
+
+          <!-- Parameter Sliders Grid -->
+          <div class="row g-3 mb-3">
+            <!-- 1. Animation Speed -->
+            <div class="col-md-6">
+              <div class="anim-control-card">
+                <div class="anim-slider-label">
+                  <span><i class="bi bi-stopwatch text-info me-1"></i> Animation Speed</span>
+                  <span class="anim-val-badge" id="val-speed">1.0x</span>
+                </div>
+                <input type="range" class="form-range-custom" id="anim-slider-speed" min="0.1" max="3.0" step="0.1" value="1.0">
+                <div class="d-flex justify-content-between text-muted small mt-1" style="font-size: 0.75rem;">
+                  <span>0.1x (Slow)</span>
+                  <span>3.0x (Fast)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 2. Wave Height (Amplitude) -->
+            <div class="col-md-6">
+              <div class="anim-control-card">
+                <div class="anim-slider-label">
+                  <span><i class="bi bi-soundwave text-info me-1"></i> Wave Height (Amplitude)</span>
+                  <span class="anim-val-badge" id="val-height">1.0x</span>
+                </div>
+                <input type="range" class="form-range-custom" id="anim-slider-height" min="0.2" max="2.5" step="0.1" value="1.0">
+                <div class="d-flex justify-content-between text-muted small mt-1" style="font-size: 0.75rem;">
+                  <span>0.2x (Flat)</span>
+                  <span>2.5x (Peaks)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Wave Frequency (Density) -->
+            <div class="col-md-6">
+              <div class="anim-control-card">
+                <div class="anim-slider-label">
+                  <span><i class="bi bi-grid-3x3 text-info me-1"></i> Lattice Frequency</span>
+                  <span class="anim-val-badge" id="val-freq">1.0x</span>
+                </div>
+                <input type="range" class="form-range-custom" id="anim-slider-freq" min="0.5" max="2.0" step="0.1" value="1.0">
+                <div class="d-flex justify-content-between text-muted small mt-1" style="font-size: 0.75rem;">
+                  <span>0.5x (Broad)</span>
+                  <span>2.0x (Dense)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 4. Particle Drift Speed -->
+            <div class="col-md-6">
+              <div class="anim-control-card">
+                <div class="anim-slider-label">
+                  <span><i class="bi bi-stars text-info me-1"></i> Particle Drift Speed</span>
+                  <span class="anim-val-badge" id="val-particles">1.0x</span>
+                </div>
+                <input type="range" class="form-range-custom" id="anim-slider-particles" min="0.2" max="3.0" step="0.1" value="1.0">
+                <div class="d-flex justify-content-between text-muted small mt-1" style="font-size: 0.75rem;">
+                  <span>0.2x (Gentle)</span>
+                  <span>3.0x (Rapid)</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- 5. Mouse Interaction Sensitivity -->
+            <div class="col-12">
+              <div class="anim-control-card">
+                <div class="anim-slider-label">
+                  <span><i class="bi bi-cursor-fill text-info me-1"></i> Mouse Ripple & Tilt Sensitivity</span>
+                  <span class="anim-val-badge" id="val-mouse">1.0x</span>
+                </div>
+                <input type="range" class="form-range-custom" id="anim-slider-mouse" min="0.2" max="2.0" step="0.1" value="1.0">
+                <div class="d-flex justify-content-between text-muted small mt-1" style="font-size: 0.75rem;">
+                  <span>0.2x (Subtle)</span>
+                  <span>2.0x (High Response)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Feature Toggles -->
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <div class="p-3 rounded border border-secondary border-opacity-25 d-flex align-items-center justify-content-between">
+                <div>
+                  <div class="fw-semibold small">Floating Particles</div>
+                  <small class="text-muted" style="font-size: 0.75rem;">Render micro data dust</small>
+                </div>
+                <div class="form-check form-switch mb-0">
+                  <input class="form-check-input" type="checkbox" role="switch" id="anim-toggle-particles" checked>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm-6">
+              <div class="p-3 rounded border border-secondary border-opacity-25 d-flex align-items-center justify-content-between">
+                <div>
+                  <div class="fw-semibold small">Mouse Reaction & Tilt</div>
+                  <small class="text-muted" style="font-size: 0.75rem;">Interactive fluid ripples</small>
+                </div>
+                <div class="form-check form-switch mb-0">
+                  <input class="form-check-input" type="checkbox" role="switch" id="anim-toggle-mouse" checked>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer modal-header-custom d-flex justify-content-between">
+          <div class="d-flex gap-2">
+            <button type="button" class="btn btn-sm btn-outline-warning" id="anim-pause-btn">
+              <i class="bi bi-pause-fill" id="anim-pause-icon"></i> <span id="anim-pause-text">Pause Animation</span>
+            </button>
+            <button type="button" class="btn btn-sm btn-outline-secondary" id="anim-reset-btn">
+              <i class="bi bi-arrow-counterclockwise"></i> Reset to Defaults
+            </button>
+          </div>
+          <button type="button" class="btn btn-cyan btn-sm px-3" data-bs-dismiss="modal">
+            Apply & Close
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating 3D Scene Tuner Button (Quick Access) -->
+  <button id="floating-anim-btn" class="floating-anim-pill" data-bs-toggle="modal" data-bs-target="#animModal" title="Adjust 3D Animation Settings">
+    <i class="bi bi-sliders2-vertical"></i>
+    <span>Tune 3D</span>
+    <span class="anim-pulse-dot" id="anim-indicator-dot"></span>
+  </button>
 
   <!-- Back to Top Button -->
   <button id="back-to-top" title="Back to top" aria-label="Back to top">

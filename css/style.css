@@ -4,59 +4,93 @@
    ========================================================================== */
 
 :root {
-  /* Dark Theme (Default) */
+  /* Dark Theme (Default) - Crisp, Luminescent White Text on Deep Obsidian Canvas */
   --bg-primary: #030712;
   --bg-secondary: #090e1a;
-  --bg-card: rgba(15, 23, 42, 0.75);
-  --bg-card-hover: rgba(22, 36, 66, 0.85);
+  --bg-surface: #0f172a;
+  --bg-card: rgba(15, 23, 42, 0.85);
+  --bg-card-hover: rgba(26, 40, 71, 0.95);
   --bg-card-solid: #0f172a;
-  --border-color: rgba(51, 65, 85, 0.6);
-  --border-highlight: rgba(6, 182, 212, 0.5);
+  --border-color: rgba(71, 85, 105, 0.55);
+  --border-highlight: rgba(6, 182, 212, 0.6);
+  
   --text-main: #f8fafc;
-  --text-muted: #94a3b8;
-  --text-subtle: #64748b;
+  --text-title: #ffffff;
+  --text-muted: #cbd5e1;       /* Elevated to slate-300 for crisp, easy reading */
+  --text-subtle: #94a3b8;      /* Slate-400 */
   
   --accent-cyan: #06b6d4;
-  --accent-cyan-glow: rgba(6, 182, 212, 0.25);
+  --accent-cyan-hover: #22d3ee;
+  --accent-cyan-glow: rgba(6, 182, 212, 0.3);
   --accent-emerald: #10b981;
   --accent-emerald-glow: rgba(16, 185, 129, 0.2);
   --accent-indigo: #6366f1;
   --accent-amber: #f59e0b;
 
-  --nav-bg: rgba(3, 7, 18, 0.85);
-  --nav-border: rgba(30, 41, 59, 0.8);
-  --badge-bg: rgba(6, 182, 212, 0.12);
+  --nav-bg: rgba(3, 7, 18, 0.92);
+  --nav-border: rgba(30, 41, 59, 0.9);
+  --badge-bg: rgba(6, 182, 212, 0.16);
   --badge-text: #38bdf8;
+  --badge-border: rgba(6, 182, 212, 0.45);
   --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
   --canvas-opacity: 0.95;
+
+  --input-bg: rgba(15, 23, 42, 0.9);
+  --input-text: #f8fafc;
+  --input-border: rgba(71, 85, 105, 0.7);
+  --input-focus-border: #06b6d4;
+
+  --table-header-bg: #0f172a;
+  --table-header-color: #38bdf8;
+  --table-row-bg: transparent;
+  --table-stripe-bg: rgba(255, 255, 255, 0.03);
+  --table-border: rgba(51, 65, 85, 0.6);
+  --section-alt-bg: rgba(0, 0, 0, 0.3);
 }
 
-/* Light Theme Variables */
+/* Light Theme Variables - Deep Executive Obsidian & Dark Attractive Typography */
 body.light-theme {
   --bg-primary: #f8fafc;
-  --bg-secondary: #f1f5f9;
-  --bg-card: rgba(255, 255, 255, 0.85);
-  --bg-card-hover: rgba(255, 255, 255, 0.98);
+  --bg-secondary: #ffffff;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --bg-card-hover: #ffffff;
   --bg-card-solid: #ffffff;
-  --border-color: rgba(203, 213, 225, 0.8);
-  --border-highlight: rgba(6, 182, 212, 0.7);
-  --text-main: #0f172a;
-  --text-muted: #475569;
-  --text-subtle: #64748b;
+  --border-color: #cbd5e1;
+  --border-highlight: #0284c7;
   
-  --accent-cyan: #0284c7;
-  --accent-cyan-glow: rgba(2, 132, 199, 0.15);
+  --text-main: #090e17;        /* Deep, rich, bold dark text with 14:1 contrast on white */
+  --text-title: #020617;       /* Razor-sharp high contrast dark title */
+  --text-muted: #334155;       /* Crisp slate-700, fully legible and attractive */
+  --text-subtle: #475569;      /* Slate-600 */
+  
+  --accent-cyan: #0284c7;      /* Vivid executive azure */
+  --accent-cyan-hover: #0369a1;
+  --accent-cyan-glow: rgba(2, 132, 199, 0.2);
   --accent-emerald: #059669;
   --accent-emerald-glow: rgba(5, 150, 105, 0.15);
-  --accent-indigo: #4f46e5;
-  --accent-amber: #d97706;
+  --accent-indigo: #4338ca;
+  --accent-amber: #b45309;
 
-  --nav-bg: rgba(255, 255, 255, 0.9);
-  --nav-border: rgba(226, 232, 240, 0.9);
-  --badge-bg: rgba(2, 132, 199, 0.1);
-  --badge-text: #0369a1;
-  --shadow-card: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
-  --canvas-opacity: 0.75;
+  --nav-bg: rgba(255, 255, 255, 0.96);
+  --nav-border: #cbd5e1;
+  --badge-bg: rgba(2, 132, 199, 0.12);
+  --badge-text: #0284c7;
+  --badge-border: rgba(2, 132, 199, 0.4);
+  --shadow-card: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 4px 6px -2px rgba(15, 23, 42, 0.04);
+  --canvas-opacity: 0.65;
+
+  --input-bg: #ffffff;
+  --input-text: #090e17;
+  --input-border: #cbd5e1;
+  --input-focus-border: #0284c7;
+
+  --table-header-bg: #f1f5f9;
+  --table-header-color: #0369a1;
+  --table-row-bg: #ffffff;
+  --table-stripe-bg: #f8fafc;
+  --table-border: #e2e8f0;
+  --section-alt-bg: #f1f5f9;
 }
 
 /* Global Typography & Reset */
@@ -86,6 +120,60 @@ h1, h2, h3, h4, h5, h6, .brand-font {
 
 .mono-font {
   font-family: 'JetBrains Mono', monospace;
+}
+
+/* Typography & Contrast Baseline Guarantees */
+strong, b {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.text-main {
+  color: var(--text-main) !important;
+}
+
+.text-title {
+  color: var(--text-title) !important;
+}
+
+.text-muted {
+  color: var(--text-muted) !important;
+}
+
+.text-secondary {
+  color: var(--text-subtle) !important;
+}
+
+.text-info {
+  color: var(--accent-cyan) !important;
+}
+
+.text-success {
+  color: var(--accent-emerald) !important;
+}
+
+.text-warning {
+  color: var(--accent-amber) !important;
+}
+
+.text-accent-cyan {
+  color: var(--accent-cyan) !important;
+}
+
+.text-accent-info {
+  color: var(--accent-cyan) !important;
+}
+
+.hover-cyan {
+  transition: color 0.2s ease;
+}
+
+.hover-cyan:hover {
+  color: var(--accent-cyan) !important;
+}
+
+.section-alt {
+  background: var(--section-alt-bg);
 }
 
 /* Selection Color */
@@ -401,13 +489,13 @@ h1, h2, h3, h4, h5, h6, .brand-font {
 /* Tags & Badges */
 .tech-pill {
   display: inline-block;
-  font-size: 0.725rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  padding: 0.25rem 0.6rem;
+  padding: 0.28rem 0.65rem;
   border-radius: 6px;
-  background: rgba(148, 163, 184, 0.1);
-  color: var(--text-muted);
-  border: 1px solid var(--border-color);
+  background: rgba(30, 41, 59, 0.75);
+  color: #f1f5f9;
+  border: 1px solid rgba(148, 163, 184, 0.3);
   margin-right: 0.35rem;
   margin-bottom: 0.35rem;
   transition: all 0.2s ease;
@@ -416,14 +504,14 @@ h1, h2, h3, h4, h5, h6, .brand-font {
 .tech-pill:hover {
   border-color: var(--accent-cyan);
   color: var(--accent-cyan);
-  background: rgba(6, 182, 212, 0.1);
+  background: rgba(6, 182, 212, 0.15);
 }
 
 /* Filter Buttons */
 .filter-btn {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  color: var(--text-muted);
+  color: #e2e8f0;
   font-weight: 600;
   font-size: 0.85rem;
   padding: 0.5rem 1.1rem;
@@ -438,6 +526,106 @@ h1, h2, h3, h4, h5, h6, .brand-font {
   color: #030712 !important;
   border-color: var(--accent-cyan);
   box-shadow: 0 4px 12px var(--accent-cyan-glow);
+}
+
+/* Specific Badges with WCAG High Contrast in Both Themes */
+.badge-level-4 {
+  background: rgba(6, 182, 212, 0.2) !important;
+  color: #38bdf8 !important;
+  border: 1px solid rgba(6, 182, 212, 0.55) !important;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  letter-spacing: 0.02em;
+  display: inline-block;
+}
+
+.badge-level-3 {
+  background: rgba(99, 102, 241, 0.2) !important;
+  color: #a5b4fc !important;
+  border: 1px solid rgba(99, 102, 241, 0.5) !important;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.badge-level-2 {
+  background: rgba(148, 163, 184, 0.2) !important;
+  color: #e2e8f0 !important;
+  border: 1px solid rgba(148, 163, 184, 0.5) !important;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.badge-verified {
+  background: #06b6d4 !important;
+  color: #030712 !important;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 0.3rem 0.65rem;
+  border-radius: 4px;
+}
+
+.badge-status-ongoing {
+  background: rgba(245, 158, 11, 0.2) !important;
+  color: #fbbf24 !important;
+  border: 1px solid rgba(245, 158, 11, 0.5) !important;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.badge-status-completed {
+  background: rgba(16, 185, 129, 0.2) !important;
+  color: #34d399 !important;
+  border: 1px solid rgba(16, 185, 129, 0.5) !important;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.project-category-badge {
+  background: rgba(6, 182, 212, 0.14) !important;
+  color: #38bdf8 !important;
+  border: 1px solid rgba(6, 182, 212, 0.35) !important;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.badge-thesis-featured {
+  background: rgba(6, 182, 212, 0.2) !important;
+  color: #38bdf8 !important;
+  border: 1px solid rgba(6, 182, 212, 0.55) !important;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.table-highlight-row {
+  background: rgba(6, 182, 212, 0.1) !important;
+  border-left: 3px solid var(--accent-cyan) !important;
+}
+
+/* Featured Project Card Component */
+.featured-project-card {
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(6, 182, 212, 0.12));
+  border: 1px solid rgba(6, 182, 212, 0.5) !important;
+  box-shadow: 0 12px 32px -4px rgba(6, 182, 212, 0.15);
+  border-radius: 16px;
+}
+
+.featured-feature-title {
+  color: var(--text-main);
+  font-size: 0.975rem;
 }
 
 /* Skill Progress Bars */
@@ -509,10 +697,10 @@ h1, h2, h3, h4, h5, h6, .brand-font {
   padding: 1.75rem;
 }
 
-/* Printable CV Styles */
+/* Printable CV Styles - High Ink Contrast in Both Light and Dark Theme */
 .cv-paper {
-  background: #ffffff;
-  color: #1e293b;
+  background: #ffffff !important;
+  color: #1e293b !important;
   border-radius: 8px;
   padding: 2.5rem;
   font-size: 0.9rem;
@@ -521,33 +709,48 @@ h1, h2, h3, h4, h5, h6, .brand-font {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
+.cv-paper h1, .cv-paper h2, .cv-paper h3, .cv-paper h4, .cv-paper h5, .cv-paper h6,
+.cv-paper strong, .cv-paper b, .cv-paper .cv-header-title, .cv-paper .cv-job-title {
+  color: #0f172a !important;
+}
+
+.cv-paper p, .cv-paper li, .cv-paper span {
+  color: #1e293b !important;
+}
+
+.cv-paper .text-muted,
+.cv-paper .text-secondary,
+.cv-paper small {
+  color: #475569 !important;
+}
+
 .cv-header-title {
-  color: #0f172a;
+  color: #0f172a !important;
   font-size: 1.75rem;
   font-weight: 800;
   margin-bottom: 0.25rem;
 }
 
 .cv-section-heading {
-  color: #0369a1;
+  color: #0369a1 !important;
   font-size: 1.1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  border-bottom: 2px solid #0284c7;
+  border-bottom: 2px solid #0284c7 !important;
   padding-bottom: 0.35rem;
   margin-top: 1.5rem;
   margin-bottom: 0.85rem;
 }
 
 .cv-job-title {
-  color: #0f172a;
+  color: #0f172a !important;
   font-weight: 700;
   font-size: 0.95rem;
 }
 
 .cv-company {
-  color: #0284c7;
+  color: #0284c7 !important;
   font-weight: 600;
 }
 
@@ -559,15 +762,29 @@ h1, h2, h3, h4, h5, h6, .brand-font {
 }
 
 .cv-table th, .cv-table td {
-  border: 1px solid #cbd5e1;
+  border: 1px solid #cbd5e1 !important;
   padding: 0.45rem 0.65rem;
   text-align: left;
 }
 
 .cv-table th {
-  background: #f1f5f9;
+  background: #f1f5f9 !important;
   font-weight: 700;
-  color: #0f172a;
+  color: #0f172a !important;
+}
+
+.cv-table td {
+  color: #1e293b !important;
+  background: #ffffff !important;
+}
+
+.cv-paper .badge-level-4-cv {
+  background: rgba(2, 132, 199, 0.12) !important;
+  color: #0369a1 !important;
+  border: 1px solid rgba(2, 132, 199, 0.4) !important;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
 }
 
 /* Print Rules - Perfect A4 Hardcopy output */
@@ -685,4 +902,522 @@ h1, h2, h3, h4, h5, h6, .brand-font {
 #back-to-top:hover {
   transform: translateY(-3px);
   background: #22d3ee;
+}
+
+/* ==========================================================================
+   Light Mode Contrast & Typography Perfection (White Mode: Dark, Attractive Text)
+   ========================================================================== */
+body.light-theme .text-white,
+body.light-theme .text-light {
+  color: var(--text-main) !important;
+}
+
+body.light-theme .text-muted {
+  color: var(--text-muted) !important;
+}
+
+body.light-theme .text-secondary {
+  color: var(--text-subtle) !important;
+}
+
+body.light-theme .text-info {
+  color: var(--accent-cyan) !important;
+}
+
+body.light-theme .text-warning {
+  color: #b45309 !important;
+}
+
+body.light-theme .text-success {
+  color: #047857 !important;
+}
+
+body.light-theme .text-primary {
+  color: #4338ca !important;
+}
+
+/* Light Theme Badges with Pristine Contrast */
+body.light-theme .badge-level-4 {
+  background: rgba(2, 132, 199, 0.12) !important;
+  color: #0369a1 !important;
+  border: 1px solid rgba(2, 132, 199, 0.45) !important;
+}
+
+body.light-theme .badge-level-3 {
+  background: rgba(67, 56, 202, 0.1) !important;
+  color: #4338ca !important;
+  border: 1px solid rgba(67, 56, 202, 0.4) !important;
+}
+
+body.light-theme .badge-level-2 {
+  background: rgba(71, 85, 105, 0.1) !important;
+  color: #334155 !important;
+  border: 1px solid rgba(71, 85, 105, 0.35) !important;
+}
+
+body.light-theme .badge-verified {
+  background: #0284c7 !important;
+  color: #ffffff !important;
+}
+
+body.light-theme .badge-status-ongoing {
+  background: rgba(217, 119, 6, 0.12) !important;
+  color: #b45309 !important;
+  border: 1px solid rgba(217, 119, 6, 0.35) !important;
+}
+
+body.light-theme .badge-status-completed {
+  background: rgba(5, 150, 105, 0.12) !important;
+  color: #047857 !important;
+  border: 1px solid rgba(5, 150, 105, 0.35) !important;
+}
+
+body.light-theme .project-category-badge {
+  background: rgba(2, 132, 199, 0.1) !important;
+  color: #0369a1 !important;
+  border: 1px solid rgba(2, 132, 199, 0.35) !important;
+}
+
+body.light-theme .badge-thesis-featured {
+  background: rgba(2, 132, 199, 0.12) !important;
+  color: #0284c7 !important;
+  border: 1px solid rgba(2, 132, 199, 0.4) !important;
+}
+
+body.light-theme .table-highlight-row {
+  background: rgba(2, 132, 199, 0.08) !important;
+  border-left: 3px solid #0284c7 !important;
+}
+
+body.light-theme .featured-project-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f9ff 100%) !important;
+  border: 1px solid rgba(2, 132, 199, 0.35) !important;
+  box-shadow: 0 12px 32px -4px rgba(2, 132, 199, 0.12) !important;
+}
+
+body.light-theme .badge.bg-success.bg-opacity-25,
+body.light-theme .badge.bg-success.bg-opacity-20 {
+  background-color: rgba(5, 150, 105, 0.12) !important;
+  color: #047857 !important;
+  border-color: rgba(5, 150, 105, 0.35) !important;
+}
+
+body.light-theme .badge.bg-warning.bg-opacity-25,
+body.light-theme .badge.bg-warning.bg-opacity-20 {
+  background-color: rgba(217, 119, 6, 0.12) !important;
+  color: #b45309 !important;
+  border-color: rgba(217, 119, 6, 0.35) !important;
+}
+
+body.light-theme .badge.bg-info.bg-opacity-20,
+body.light-theme .badge.bg-primary.bg-opacity-20,
+body.light-theme .badge.bg-secondary.bg-opacity-25 {
+  background-color: rgba(2, 132, 199, 0.1) !important;
+  color: #0369a1 !important;
+  border-color: rgba(2, 132, 199, 0.35) !important;
+}
+
+body.light-theme .navbar-brand .text-white {
+  color: var(--text-main) !important;
+}
+
+body.light-theme .navbar-nav .nav-link {
+  color: #334155 !important;
+}
+
+body.light-theme .navbar-nav .nav-link:hover,
+body.light-theme .navbar-nav .nav-link.active {
+  color: var(--accent-cyan) !important;
+}
+
+body.light-theme .navbar-toggler {
+  border-color: #cbd5e1;
+}
+
+body.light-theme .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+body.light-theme .hero-role-pill {
+  background: rgba(2, 132, 199, 0.1);
+  color: #0369a1;
+  border-color: rgba(2, 132, 199, 0.35);
+  box-shadow: 0 2px 10px rgba(2, 132, 199, 0.1);
+}
+
+body.light-theme .hero-name {
+  color: var(--text-title);
+}
+
+body.light-theme .hero-bio {
+  color: #334155;
+}
+
+body.light-theme .section-title {
+  color: var(--text-title);
+}
+
+body.light-theme .section-subtitle {
+  color: #475569;
+}
+
+body.light-theme .custom-card {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 18px -2px rgba(15, 23, 42, 0.08), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+}
+
+body.light-theme .custom-card:hover {
+  border-color: var(--border-highlight);
+  background: #ffffff;
+  box-shadow: 0 12px 28px -4px rgba(2, 132, 199, 0.15), 0 4px 10px -2px rgba(15, 23, 42, 0.05);
+}
+
+body.light-theme .metric-box {
+  background: #ffffff;
+  border-color: #cbd5e1;
+}
+
+body.light-theme .metric-box:hover {
+  border-color: var(--accent-cyan);
+  box-shadow: 0 6px 18px -2px rgba(2, 132, 199, 0.2);
+}
+
+body.light-theme .metric-number {
+  color: #0284c7;
+}
+
+body.light-theme .metric-label {
+  color: #334155;
+}
+
+body.light-theme .btn-outline-custom {
+  color: #0f172a !important;
+  border-color: #cbd5e1;
+  background: #ffffff;
+}
+
+body.light-theme .btn-outline-custom:hover {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan) !important;
+  background: rgba(2, 132, 199, 0.08);
+}
+
+body.light-theme .btn-cyan {
+  background: #0284c7;
+  color: #ffffff !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.3);
+}
+
+body.light-theme .btn-cyan:hover {
+  background: #0369a1;
+  box-shadow: 0 6px 20px rgba(2, 132, 199, 0.4);
+}
+
+body.light-theme .tech-pill {
+  background: #f1f5f9;
+  color: #334155;
+  border-color: #cbd5e1;
+}
+
+body.light-theme .tech-pill:hover {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  background: rgba(2, 132, 199, 0.1);
+}
+
+body.light-theme .filter-btn {
+  background: #ffffff;
+  color: #334155;
+  border-color: #cbd5e1;
+}
+
+body.light-theme .filter-btn:hover,
+body.light-theme .filter-btn.active {
+  background: #0284c7;
+  color: #ffffff !important;
+  border-color: #0284c7;
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+}
+
+body.light-theme .timeline-item {
+  border-left-color: #cbd5e1;
+}
+
+body.light-theme .timeline-item:hover {
+  border-left-color: #0284c7;
+}
+
+body.light-theme .timeline-dot {
+  background: #ffffff;
+  border-color: #0284c7;
+  box-shadow: 0 0 10px rgba(2, 132, 199, 0.35);
+}
+
+body.light-theme .timeline-date-badge {
+  background: rgba(2, 132, 199, 0.1);
+  color: #0284c7;
+  border-color: rgba(2, 132, 199, 0.35);
+}
+
+body.light-theme .skill-progress {
+  background: #e2e8f0;
+}
+
+body.light-theme .section-padding[style*="background"] {
+  background: var(--section-alt-bg) !important;
+}
+
+body.light-theme footer {
+  background: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+body.light-theme footer .text-muted {
+  color: #475569 !important;
+}
+
+/* Light Theme Tables (Clean Executive Presentation) */
+body.light-theme .table-dark {
+  --bs-table-bg: #ffffff;
+  --bs-table-striped-bg: #f8fafc;
+  --bs-table-striped-color: #0f172a;
+  --bs-table-active-bg: #f1f5f9;
+  --bs-table-active-color: #0f172a;
+  --bs-table-hover-bg: #f1f5f9;
+  --bs-table-hover-color: #0f172a;
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+}
+
+body.light-theme .table-dark th {
+  background-color: #f1f5f9 !important;
+  color: #0369a1 !important;
+  border-color: #cbd5e1 !important;
+}
+
+body.light-theme .table-dark td {
+  color: #0f172a !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Form Controls - Universal Theme Compatibility */
+.form-control-custom {
+  background: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  padding: 0.65rem 0.95rem;
+  font-size: 0.925rem;
+  transition: all 0.2s ease;
+}
+
+.form-control-custom:focus {
+  background: var(--input-bg);
+  color: var(--input-text);
+  border-color: var(--input-focus-border);
+  box-shadow: 0 0 0 3px var(--accent-cyan-glow);
+  outline: none;
+}
+
+.form-control-custom::placeholder {
+  color: var(--text-subtle);
+  opacity: 0.8;
+}
+
+body.light-theme .form-control-custom {
+  background: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+}
+
+body.light-theme .form-control-custom:focus {
+  border-color: #0284c7 !important;
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15) !important;
+}
+
+/* Modal Light Mode */
+body.light-theme .modal-content-custom {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: #cbd5e1;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.25);
+}
+
+body.light-theme .modal-header-custom {
+  border-color: #e2e8f0;
+}
+
+body.light-theme .btn-close-white {
+  filter: invert(1) grayscale(100%) brightness(20%) !important;
+}
+
+/* ==========================================================================
+   Floating 3D Scene Tuner Button
+   ========================================================================== */
+.floating-anim-pill {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 9999px;
+  background: var(--nav-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-highlight);
+  color: var(--accent-cyan);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.35), 0 0 12px var(--accent-cyan-glow);
+  cursor: pointer;
+  z-index: 998;
+  transition: all 0.25s ease;
+}
+
+.floating-anim-pill:hover {
+  transform: translateY(-3px) scale(1.02);
+  border-color: var(--accent-cyan);
+  background: var(--bg-card-hover);
+  box-shadow: 0 12px 28px -4px var(--accent-cyan-glow);
+}
+
+.anim-pulse-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-emerald);
+  display: inline-block;
+  box-shadow: 0 0 8px var(--accent-emerald-glow);
+  animation: pulseDot 2s infinite;
+}
+
+.anim-pulse-dot.paused {
+  background: #f59e0b;
+  box-shadow: 0 0 8px rgba(245, 158, 11, 0.5);
+  animation: none;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+
+/* ==========================================================================
+   Animation Tuning Studio Controls (Modal & Sliders)
+   ========================================================================== */
+.anim-control-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.15rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.anim-control-card:hover {
+  border-color: var(--border-highlight);
+}
+
+body.light-theme .anim-control-card {
+  background: #f8fafc;
+  border-color: #cbd5e1;
+}
+
+.anim-slider-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.anim-val-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.78rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+  background: var(--badge-bg);
+  color: var(--badge-text);
+  border: 1px solid var(--border-highlight);
+}
+
+/* Range input styling */
+.form-range-custom {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: rgba(148, 163, 184, 0.25);
+  outline: none;
+  transition: background 0.2s ease;
+}
+
+.form-range-custom::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  cursor: pointer;
+  box-shadow: 0 0 10px var(--accent-cyan-glow);
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.form-range-custom::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  background: var(--accent-cyan-hover);
+}
+
+.form-range-custom::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent-cyan);
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 10px var(--accent-cyan-glow);
+}
+
+/* Preset Buttons Grid */
+.anim-preset-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  border-radius: 8px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.825rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.anim-preset-btn:hover,
+.anim-preset-btn.active {
+  background: var(--accent-cyan);
+  color: #030712 !important;
+  border-color: var(--accent-cyan);
+  box-shadow: 0 3px 10px var(--accent-cyan-glow);
+}
+
+body.light-theme .anim-preset-btn {
+  background: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+}
+
+body.light-theme .anim-preset-btn:hover,
+body.light-theme .anim-preset-btn.active {
+  background: #0284c7;
+  color: #ffffff !important;
+  border-color: #0284c7;
 }
